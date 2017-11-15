@@ -41,7 +41,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope,$http) {
   /*$scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -56,8 +56,8 @@ angular.module('starter.controllers', [])
     params:{
       tabella: 'annunci'
     }
-  }).then(finction(response){
-    $scope.playlists= response.data.annunci;
+  }).then(function(response){
+    $scope.playlists = response.data.annunci;
     console.log($scope.playlists);
   }).catch(function(error){
     console.log(error);
