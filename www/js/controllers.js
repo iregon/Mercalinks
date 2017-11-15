@@ -60,7 +60,7 @@ angular.module('starter.controllers', [])
     $scope.playlists = response.data.annunci;
     console.log($scope.playlists);
   }).catch(function(error) {
-=    console.log(error);
+    console.log(error);
   });
 })
 
