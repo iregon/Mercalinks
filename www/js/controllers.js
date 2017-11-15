@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
+  /*$scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
     { title: 'Dubstep', id: 3 },
@@ -50,6 +50,18 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
+  */
+  var link= "http://mercalinks.alterista.org/select1.php";
+  $http.get(link,{
+    params:{
+      tabella: 'annunci'
+    }
+  }).then(finction(response){
+    $scope.playlists= response.data.annunci;
+    console.log($scope.playlists);
+  }).catch(function(error){
+    console.log(error);
+  });
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
