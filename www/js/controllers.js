@@ -41,25 +41,25 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope,$http) {
-  /*$scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
-  */
-  var link= "http://mercalinks.alterista.org/select1.php";
-  $http.get(link,{
-    params:{
-      tabella: 'annunci'
+.controller('PlaylistsCtrl', function($scope, $http) {
+  // $scope.playlists = [
+  //   { title: 'Reggae', id: 1 },
+  //   { title: 'Chill', id: 2 },
+  //   { title: 'Dubstep', id: 3 },
+  //   { title: 'Indie', id: 4 },
+  //   { title: 'Rap', id: 5 },
+  //   { title: 'Cowbell', id: 6 }
+  // ];
+
+  var link = "http://mercalinks.altervista.org/select1.php";
+  $http.get(link, {
+    params: {
+      tabella: "annunci"
     }
-  }).then(function(response){
-    $scope.playlists = response.data.annunci;
-    console.log($scope.playlists);
-  }).catch(function(error){
+  }).then(function(response) {
+    $scope.annunci = response.data.annunci;
+    console.log($scope.annunci);
+  }).catch(function(error) {
     console.log(error);
   });
 })
