@@ -57,8 +57,8 @@ angular.module('starter.controllers', [])
       tabella: "annunci"
     }
   }).then(function(response) {
-    $scope.playlists = response.data.annunci;
-    console.log($scope.playlists);
+    $scope.annunci = response.data.annunci;
+    console.log($scope.annunci);
   }).catch(function(error) {
     console.log(error);
   });
