@@ -1,1 +1,24 @@
-/* Empty. Add your own CSS if you like */
+.white{
+  background-color: : #FFFFFF;
+}
+
+.whiteDetail{
+  color: #FFFFFF;
+}
+
+.blueDetail{
+  color: #007399;
+}
+
+
+.blue{
+  background-color: #0099cc;
+}
+
+.darkblue{
+  background-color: #007399;
+}
+
+.red{
+  background-color: #8b0000;
+}
