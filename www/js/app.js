@@ -69,6 +69,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage', 'angular
       }
     })
 
+    .state('app.annunciUtente', {
+      url: '/annunciUtente',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/annunciUtente/annunciUtente.html',
+          controller: 'AnnunciUtenteCtrl'
+        }
+      }
+    })
+
     .state('app.annuncio', {
       url: '/annuncio/:annuncioId',
       views: {
