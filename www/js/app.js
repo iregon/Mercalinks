@@ -70,7 +70,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
     })
 
     .state('app.annunciUtente', {
-      url: '/annunciUtente',
+      url: '/annunciUtente/:nome',
       views: {
         'menuContent': {
           templateUrl: 'templates/annunciUtente/annunciUtente.html',
