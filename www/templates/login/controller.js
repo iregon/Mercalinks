@@ -18,9 +18,10 @@ angular.module('starter')
     }).then(function(response) {
       $scope.res = response.data;
       console.log($scope.res);
-      $localStorage.$default({
-        id_utente: $scope.res["id"]
-      });
+      $localStorage.id_utente = $scope.res["id"];
+      // $localStorage.$default({
+      //   id_utente: $scope.res["id"]
+      // });
     }).catch(function(error) {
       console.log(error);
     });
