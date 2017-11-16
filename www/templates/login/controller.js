@@ -1,15 +1,9 @@
 angular.module('starter')
 
-.controller('LoginCtrl', function($scope, $http, $timeout, $ionicModal) {
-
-  $ionicModal.fromTemplateUrl('templates/login/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
+.controller('LoginCtrl', function($scope, $http, $timeout, $localStorage) {
 
   $scope.closeLogin = function() {
-    $scope.modal.hide();
+    // $scope.modal.hide();
   };
 
   // Perform the login action when the user submits the login form
@@ -22,11 +16,16 @@ angular.module('starter')
         str: $scope.loginData.email + ";" + $scope.loginData.password
       }
     }).then(function(response) {
-      $scope.annunci = response.data;
-      console.log($scope.annunci);
+      $scope.res = response.data;
+      console.log($scope.res);
+      $localStorage.$default({
+        id_utente: $scope.res["id"]
+      });
     }).catch(function(error) {
       console.log(error);
     });
+
+    $scope.closeLogin();
 
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
