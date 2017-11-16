@@ -13,4 +13,4 @@ angular.module('starter')
   }).catch(function(error) {
     console.log(error);
   });
-})
+});

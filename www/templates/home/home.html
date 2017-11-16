@@ -2,8 +2,8 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="annuncio in annunci" href="#/app/playlists/{{annuncio.id_annuncio}}">
-        <h2>{{annuncio.titolo}}</h2>
-          <p>€ {{annuncio.prezzo}}</p>
+        <h2 class="blueDetail">{{annuncio.titolo}}</h2>
+        <span class="redDetail item">€ {{annuncio.prezzo}}</span>
       </ion-item>
     </ion-list>
   </ion-content>
