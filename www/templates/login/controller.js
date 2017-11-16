@@ -12,7 +12,7 @@ angular.module('starter')
     var link = "http://mercalinks.altervista.org/login.php";
     var param = window.btoa($scope.loginData.email + ";" + $scope.loginData.password);
     // var CryptoJS = require("crypto-js");
-    // const hashDigest = CryptoJS.sha256("aaa");
+    var hashDigest = CryptoJS.sha256("aaa");
 
     $http.get(link, {
       params: {
