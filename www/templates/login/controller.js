@@ -8,20 +8,20 @@ angular.module('starter')
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
-    // console.log('Doing login', $scope.loginData);
 
     var link = "http://mercalinks.altervista.org/login.php";
+    var param = window.btoa($scope.loginData.email + ";" + $scope.loginData.password);
+    // var CryptoJS = require("crypto-js");
+    var hashDigest = CryptoJS.sha256("aaa");
+
     $http.get(link, {
       params: {
-        str: $scope.loginData.email + ";" + $scope.loginData.password
+        str: param
       }
     }).then(function(response) {
       $scope.res = response.data;
       console.log($scope.res);
       $localStorage.id_utente = $scope.res["id"];
-      // $localStorage.$default({
-      //   id_utente: $scope.res["id"]
-      // });
     }).catch(function(error) {
       console.log(error);
     });
