@@ -36,6 +36,7 @@ angular.module('starter.controllers', [])
   // ];
 
 })
+/*.controller('AnnuncioCtrl', function($scope, $stateParams) {
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+*/

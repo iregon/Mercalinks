@@ -69,15 +69,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
       }
     })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+    .state('app.annuncio', {
+      url: '/annuncio/:annuncioId',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/annuncio/annuncio.html',
+          controller: 'AnnuncioCtrl'
+        }
       }
-    }
-  });
+    });
+    
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 });
