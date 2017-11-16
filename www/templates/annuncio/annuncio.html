@@ -1,9 +1,19 @@
-
 <ion-view view-title="Annuncio">
   <ion-content>
-    <img src="{{annuncio.immagine}}" alt="">
-    <h1>{{annuncio.titolo}}</h1>
+    <img src="{{annuncio.immagine}}" alt="" >
+    <table>
+      <tr>
+        <th class="annuncio_titolo border">
+          {{annuncio.titolo}}
+        </th>
+        <th class="annuncio_prezzo">
+          €{{annuncio.prezzo}}
+        </th>
+      </tr>
+    </table>
+
+
     <p>{{annuncio.descrizione}}</p>
-    <p>Prezzo: € </p>
+
   </ion-content>
 </ion-view>
