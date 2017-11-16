@@ -9,3 +9,8 @@
   width: 100%;
   font-size: 2.5em;
 }
+
+.border{
+  border-bottom: 2px solid grey;
+
+}
