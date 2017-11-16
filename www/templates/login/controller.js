@@ -19,7 +19,7 @@ angular.module('starter')
     var link = "http://mercalinks.altervista.org/login.php";
     $http.get(link, {
       params: {
-        str: $scope.loginData.email
+        str: $scope.loginData.email + ";" + $scope.loginData.password
       }
     }).then(function(response) {
       $scope.annunci = response.data;
