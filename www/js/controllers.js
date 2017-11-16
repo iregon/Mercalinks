@@ -47,6 +47,7 @@ angular.module('starter.controllers', [])
     console.log(error);
   });
 })
+/*.controller('AnnuncioCtrl', function($scope, $stateParams) {
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 });
+*/
