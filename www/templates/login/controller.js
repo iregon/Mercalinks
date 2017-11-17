@@ -15,15 +15,18 @@ angular.module('starter')
     var key = CryptoJS.enc.Hex.parse("101112131415161718191a1b1c1d1e1f");
     var hashDigest = CryptoJS.AES.encrypt(param, key, {iv:iv});
 
-    $http.get(link, {
-      params: {
+    $http({
+      method: 'POST',
+      url: link,
+      data: {
         str: hashDigest.ciphertext.toString(CryptoJS.enc.Base64)
       }
+      // headers: {'Content-Type': 'application/json'}
     }).then(function(response) {
       $scope.res = response.data;
       console.log($scope.res);
       $localStorage.id_utente = $scope.res;
-    }).catch(function(error) {
+    }, function(error) {
       console.log(error);
     });
 
