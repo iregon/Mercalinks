@@ -27,7 +27,7 @@
 }
 
 /*allinea il primo item della lista alla navbar*/
-ion-item:first-child, label:first-child{
+ion-item:first-child, label:first-child, .scroll-content{
   margin-top: 14px;
 }
 /*ingrandisce navbar*/
