@@ -1,1 +1,7 @@
-/*stile*/
+/*stile
+body{
+  background-color: blue !important;
+}
+ion-view{
+  background-color: blue !important;
+}*/

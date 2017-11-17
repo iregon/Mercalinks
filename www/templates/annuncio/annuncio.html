@@ -1,9 +1,9 @@
 <ion-view view-title="Annuncio">
   <ion-content>
-    <img src="{{annuncio.immagine}}" alt="" >
+    <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" alt="" >
     <table>
       <tr>
-        <th class="annuncio_titolo border">
+        <th class="annuncio_titolo">
           {{annuncio.titolo}}
         </th>
         <th class="annuncio_prezzo">
@@ -11,9 +11,15 @@
         </th>
       </tr>
     </table>
-
-
-    <p>{{annuncio.descrizione}}</p>
-
+    <!--linea grigia per Rocca-->
+    <hr>
+    <div>
+      <p class="annuncio_descrizione">{{annuncio.descrizione}}</p>
+      <p class="annuncio_utente"><span class="annuncio_inserito_da">Inserito da</span>
+        <br>{{utente.nome}} {{utente.cognome}}</p>
+    </div>
+    <div>
+    <center><button class="annuncio_contatta">Contattami</button></center>
+    </div>
   </ion-content>
 </ion-view>
