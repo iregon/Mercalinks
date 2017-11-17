@@ -1,23 +1,26 @@
 /*stile*/
 
-.annU1 ion-view {
+ion-view {
 }
 
 .annU1{
-  border: 0 !important;
-  border-top: 1px solid #0099cc !important;
+  padding:0px !important;
+  margin-top:0px !important;
+  border-top: 0 !important;
+  border: 1px solid #0099cc !important;
 }
 
 ion-item:first-child{
-  border-top: 0px;
+  border-top: 0px !important;
 }
 
 .annU1 span{
-  border:0px;
+  border:0px !important;
 }
 
-.annU1 h2{
-  padding:1px;
+h2{
+  margin:0px !important;
+  padding:1px !important;
 }
 
 
