@@ -1,5 +1,18 @@
 angular.module('starter.controllers', [])
 
+.factory('Annunci', function(){
+  var annunci = {};
+  return{
+    getAnnunci: function(){
+      return annunci;
+    }
+
+    setAnnunci: function(param){
+      annunci = param;
+    }
+  }
+})
+
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
