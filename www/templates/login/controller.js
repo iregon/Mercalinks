@@ -10,13 +10,14 @@ angular.module('starter')
   $scope.doLogin = function() {
 
     var link = "http://mercalinks.altervista.org/login.php";
-    var param = window.btoa($scope.loginData.email + ";" + $scope.loginData.password);
-    // var CryptoJS = require("crypto-js");
-    var hashDigest = CryptoJS.sha256("aaa");
+    var param = $scope.loginData.email + ";" + $scope.loginData.password;
+    var iv =  CryptoJS.enc.Hex.parse("abcdef9876543210abcdef9876543210");
+    var key = CryptoJS.enc.Hex.parse("101112131415161718191a1b1c1d1e1f");
+    var hashDigest = CryptoJS.AES.encrypt(param, key, {iv:iv});
 
     $http.get(link, {
       params: {
-        str: param
+        str: hashDigest.ciphertext.toString(CryptoJS.enc.Base64)
       }
     }).then(function(response) {
       $scope.res = response.data;
