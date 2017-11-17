@@ -23,7 +23,7 @@ angular.module('starter')
       $scope.res = response.data;
       console.log($scope.res);
       $localStorage.id_utente = $scope.res;
-      window.location = "/app/annunciUtente";
+      window.location.replace("#/app/annunciUtente");
     }).catch(function(error) {
       console.log(error);
     });
