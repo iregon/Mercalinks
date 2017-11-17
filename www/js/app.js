@@ -32,11 +32,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.inserisciAnnuncio', {
+    url: '/inserisciAnnuncio',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/InserisciAnnuncio/InserisciAnnuncio.html',
+        controller: 'InserisciAnnuncioCtrl'
       }
     }
   })
