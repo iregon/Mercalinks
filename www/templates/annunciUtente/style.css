@@ -1,7 +1,12 @@
-/*stile
-body{
-  background-color: blue !important;
+/*stile*/
+ion-view .annunciUtente{
+  background-color: #ddeeff !important;
+  margin-top: 20px !important;
 }
-ion-view{
-  background-color: blue !important;
-}*/
+ion-item .annunciUtente{
+  margin: 5px !important;
+  margin-top: 5px !important;
+  border-radius: 10px !important;
+  border-color: black !important;
+}
+/**/
