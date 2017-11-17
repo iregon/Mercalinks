@@ -1,7 +1,11 @@
-/*stile
-body{
-  background-color: blue !important;
-}
+/*stile*/
 ion-view{
-  background-color: blue !important;
-}*/
+  background-color: #ddeeff !important;
+}
+ion-item{
+  margin: 5px !important;
+  margin-top: 10px !important;
+  border-radius: 10px !important;
+  border-color: #890000;
+}
+/**/
