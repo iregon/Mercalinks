@@ -10,7 +10,7 @@ angular.module('starter')
   $scope.doLogin = function() {
 
     var link = "http://mercalinks.altervista.org/login.php";
-    var param = $scope.loginData.email + ";" + $scope.loginData.password;
+    var param = $scope.loginData.email.trim() + "###" + $scope.loginData.password.trim() + "###";
     var iv =  CryptoJS.enc.Hex.parse("abcdef9876543210abcdef9876543210");
     var key = CryptoJS.enc.Hex.parse("101112131415161718191a1b1c1d1e1f");
     var hashDigest = CryptoJS.AES.encrypt(param, key, {iv:iv});
@@ -22,7 +22,8 @@ angular.module('starter')
     }).then(function(response) {
       $scope.res = response.data;
       console.log($scope.res);
-      $localStorage.id_utente = $scope.res["id"];
+      $localStorage.id_utente = $scope.res;
+      window.location = "/app/annunciUtente";
     }).catch(function(error) {
       console.log(error);
     });

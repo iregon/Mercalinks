@@ -25,3 +25,23 @@
 .redDetail{
   color: #8b0000;
 }
+
+/*allinea il primo item della lista alla navbar*/
+ion-item:first-child{
+  margin-top: 14px;
+}
+/*ingrandisce navbar*/
+.bar {
+  height: 60px;
+}
+
+/*rende titolo e navbar uguali*/
+.bar .title{
+  line-height: 60px;
+  /*color: #FFF;*/
+}
+
+.bar.bar-header{
+  background-color: #0099cc;
+
+}

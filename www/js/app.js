@@ -79,7 +79,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
         }
       }
     })
-
+    
     .state('app.annuncio', {
       url: '/annuncio/:annuncioId',
       views: {
