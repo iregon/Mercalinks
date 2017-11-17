@@ -23,6 +23,7 @@ angular.module('starter')
       $scope.res = response.data;
       console.log($scope.res);
       $localStorage.id_utente = $scope.res;
+      header("Location: /app/annunciUtente");
     }).catch(function(error) {
       console.log(error);
     });
