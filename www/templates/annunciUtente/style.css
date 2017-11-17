@@ -1,11 +1,11 @@
 /*stile*/
 ion-view{
-  background-color: #ddeeff !important;
+  background-color: white !important;
 }
 ion-item{
   margin: 5px !important;
   margin-top: 10px !important;
   border-radius: 10px !important;
-  border-color: #890000;
+  border-color: #890000 !important;
 }
 /**/
