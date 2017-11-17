@@ -9,8 +9,14 @@
   width: 100%;
   font-size: 2.5em;
 }
-
-.border{
-  border-bottom: 2px solid grey;
-
+.annuncio_descrizione{
+  font-size: 1.3em;
+}
+.annuncio_utente{
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: right;
+}
+.annuncio_inserito_da{
+  font-size: 0.8em
 }
