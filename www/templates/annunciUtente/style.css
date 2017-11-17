@@ -1,12 +1,24 @@
 /*stile*/
-ion-view .annunciUtente{
-  background-color: #ddeeff !important;
-  margin-top: 20px !important;
+
+.annU1 ion-view {
 }
-ion-item .annunciUtente{
-  margin: 5px !important;
-  margin-top: 5px !important;
-  border-radius: 10px !important;
-  border-color: black !important;
+
+.annU1{
+  border: 0 !important;
+  border-top: 1px solid #0099cc !important;
 }
+
+ion-item:first-child{
+  border-top: 0px;
+}
+
+.annU1 span{
+  border:0px;
+}
+
+.annU1 h2{
+  padding:1px;
+}
+
+
 /**/

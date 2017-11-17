@@ -4,7 +4,7 @@
       <ion-list-header>
         <h2>Annunci di {{nomeU}}</h2>
       </ion-list-header>
-      <ion-item ng-repeat="annuncio in annunciU" href="#/app/playlists/{{annuncio.id_annuncio}}">
+      <ion-item class="annU1" ng-repeat="annuncio in annunciU" href="#/app/playlists/{{annuncio.id_annuncio}}">
         <h2 class="blueDetail">{{annuncio.titolo}}</h2>
         <span class="redDetail item">€ {{annuncio.prezzo}}</span>
       </ion-item>
