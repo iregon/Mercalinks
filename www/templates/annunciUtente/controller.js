@@ -3,27 +3,10 @@ angular.module('starter')
 .controller('AnnunciUtenteCtrl', function($scope, $http, $timeout, $localStorage, $stateParams) {
 
   var link = "http://mercalinks.altervista.org/select1.php";
-  var nomeU= $stateParams.nome;
-  var idU=0;
-
-  $http.get(link, {
-    params: {
-      tabella: "utenti"
-    }
-  }).then(function(response) {
-    console.log(nomeU);
-    $scope.utenti = response.data.utenti;
-    //in teoria scorro la lista di utenti e prendo l'id di quello che ha effettuato l'accesso (nomeU)
-    for(var i=0;i<$scope.utenti.length;i++){
-      if($scope.utenti[i].nome == nomeU){
-        idU=$scope.utenti[i].id_utente;
-        break;
-      }
-    }
-    console.log($scope.utenti);
-  }).catch(function(error) {
-    console.log(error);
-  });
+  //var nomeU= $stateParams.nome;
+  var nomeU="Giulia";
+  var idU=$localStorage.id_utente;
+  $scope.annunciU = [];
 
   $http.get(link, {
     params: {
@@ -31,12 +14,10 @@ angular.module('starter')
     }
   }).then(function(response) {
     $scope.annunci = response.data.annunci;
-    //sempre in teoria tolgo gli annunci che non sono di quell'utente
+
     for(var i=0;i<$scope.annunci.length;i++){
-      if($scope.annunci[i].id_utente != idU){
-        //controllo i>length
-        $scope.annunci[i]=$scope.annunci[$scope.annunci.length-1];
-        $scope.annunci.pop();
+      if($scope.annunci[i].id_utente == idU){
+        $scope.annunciU.push($scope.annunci[i]);
       }
     }
     console.log($scope.annunci);
