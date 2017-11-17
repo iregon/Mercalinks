@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
   return{
     getAnnunci: function(){
       return annunci;
-    }
+    },
 
     setAnnunci: function(param){
       annunci = param;
