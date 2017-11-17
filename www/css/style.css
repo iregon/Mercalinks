@@ -27,7 +27,7 @@
 }
 
 /*allinea il primo item della lista alla navbar*/
-ion-item:first-child{
+ion-item:first-child, label:first-child{
   margin-top: 14px;
 }
 /*ingrandisce navbar*/
@@ -35,13 +35,25 @@ ion-item:first-child{
   height: 60px;
 }
 
-/*rende titolo e navbar uguali*/
-.bar .title{
-  line-height: 60px;
-  /*color: #FFF;*/
-}
-
 .bar.bar-header{
   background-color: #0099cc;
+}
 
+.bar.button.button-icon.button-clear.ion-navicon::after{
+  line-height: 44px;
+}
+
+.bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
+    vertical-align: top;
+    font-size: 32px;
+    line-height: 48px;
+}
+.bar button.back-button {
+    margin-top: 5px;
+
+}
+/*rende titolo e navbar uguali*/
+.platform-android .bar .title{
+  line-height: 60px;
+  color: #FFF;
 }

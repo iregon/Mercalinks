@@ -8,6 +8,9 @@ span.itemHome{
 h2.itemHome{
   font-size: 120%;
   padding: 0px;
+  padding-bottom: 2px;
   border: 0px;
-  margin: 0px;
+  margin : 0px;
+
+  background-color: transparent;
 }
