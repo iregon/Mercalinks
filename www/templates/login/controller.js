@@ -11,7 +11,7 @@ angular.module('starter')
 
     var link = "http://mercalinks.altervista.org/login.php";
     var cryptedPass = CryptoJS.SHA1($scope.loginData.password.trim());
-    console.log(cryptedPass.toString(CryptoJS.enc.Base64));
+    // console.log(cryptedPass.toString(CryptoJS.enc.Base64));
     var param = $scope.loginData.email.trim() + "###" + cryptedPass + "###";
     var iv =  CryptoJS.enc.Hex.parse("abcdef9876543210abcdef9876543210");
     var key = CryptoJS.enc.Hex.parse("101112131415161718191a1b1c1d1e1f");
