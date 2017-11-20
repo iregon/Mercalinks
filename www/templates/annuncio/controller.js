@@ -1,9 +1,23 @@
 angular.module('starter')
 
-.controller('AnnuncioCtrl', function($scope, $stateParams, $http) {
+.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup) {
 
   var link = "http://mercalinks.altervista.org/select2.php";
   var id=$stateParams.annuncioId;
+
+  $scope.contatta = function(){
+    var alertPopup = $ionicPopup.AnnuncioCtrl.create();
+    alertPopup.setTitle('Contatta');
+    /*alertPopup.addInput({
+      type: 'radio',
+      label: 'telefono',
+      value:'telefono'
+    });*/
+    alertPopup.addButton('Cancel');
+    alertPopup.then(function(res) {
+           console.log(res);
+        });
+  };
   //console.log(id);
   $http.get(link,{
     params:{
