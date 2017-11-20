@@ -2,9 +2,23 @@
   <ion-content>
       <h2>Annunci di {{nomeU}}</h2>
     <ion-list>
-      <ion-item class="annU1" ng-repeat="annuncio in annunciU" href="#/app/playlists/{{annuncio.id_annuncio}}">
-        <h2 class="blueDetail">{{annuncio.titolo}}</h2>
-        <span class="redDetail item">€ {{annuncio.prezzo}}</span>
+      <ion-item class="ann" ng-repeat="annuncio in annunciU" href="#/app/annuncio/{{annuncio.id_annuncio}}">
+        <table>
+          <tr class="ann">
+            <td class="centra" rowspan="2">
+              <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" height="50" width="50" alt="" >
+            </td>
+            <td>
+              <h2 class="blueDetail">{{annuncio.titolo}}</h2>
+              <p style="text-overflow: ellipsis">{{annuncio.descrizione}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="redDetail item">€ {{annuncio.prezzo}}</span>
+            </td>
+          </tr>
+        </table>
       </ion-item>
     </ion-list>
   </ion-content>

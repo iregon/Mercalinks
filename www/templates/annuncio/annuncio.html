@@ -1,6 +1,6 @@
 <ion-view view-title="Annuncio">
   <ion-content>
-    <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" alt="" >
+    <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" alt="" class="annuncio_immagine">
     <table>
       <tr>
         <th class="annuncio_titolo">
@@ -19,7 +19,7 @@
         <br>{{utente.nome}} {{utente.cognome}}</p>
     </div>
     <div>
-    <center><button class="annuncio_contatta">Contatta</button></center>
+    <center><button ng-click="contatta()" class="annuncio_contatta">Contatta</button></center>
     </div>
   </ion-content>
 </ion-view>
