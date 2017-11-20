@@ -38,15 +38,16 @@ angular.module('starter.controllers', [])
   };
 
   $scope.is_user_logged = function() {
-    // var user_info = $localStorage.id_utente;
-    // if($localStorage.id_utente.utente === undefined) {
-    //   console.log("Logged");
-    //   return true;
-    // }
-    // else {
-    //   console.log("Not logged");
-    //   return false;
-    // }
+    // console.log($localStorage.id_utente.utente);
+    var user_info = $localStorage.id_utente;
+    if($localStorage.id_utente.utente != undefined) {
+      console.log("Logged");
+      return true;
+    }
+    else {
+      console.log("Not logged");
+      return false;
+    }
   };
 })
 

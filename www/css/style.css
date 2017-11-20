@@ -108,3 +108,6 @@ ion-item:first-child{
 
 .menu_user_header {
   width: 100%;
+  background-color: #000;
+  color: #fff;
+}
