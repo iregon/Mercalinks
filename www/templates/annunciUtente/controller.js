@@ -5,7 +5,6 @@ angular.module('starter')
   var link = "http://mercalinks.altervista.org/select1.php";
   var idU=$localStorage.id_utente["utente"]["id_utente"];
   $scope.nomeU=$localStorage.id_utente["utente"]["nome"];
-  console.log(idU + $scope.nomeU);
   $scope.annunciU = [];
 
   //filtro gli annunci tenendomi quelli dell'utente
@@ -14,8 +13,8 @@ angular.module('starter')
       tabella: "annunci"
     }
   }).then(function(response) {
-    annunci = response.data.annunci;
-
+    var annunci = response.data.annunci;
+    console.log(annunci);
     for(var i=0;i<annunci.length;i++){
       if(annunci[i].id_utente == idU){
         $scope.annunciU.push(annunci[i]);

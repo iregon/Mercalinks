@@ -1,3 +1,14 @@
 .login_input {
   font-size: 1em !important;
 }
+
+.login_reg_button {
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.login_reg_button a {
+  text-decoration: none;
+  font-size: 1.1em;
+}
