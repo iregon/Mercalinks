@@ -1,30 +1,30 @@
  <ion-view view-title="Nuovo annuncio">
   <ion-content>
-    <form ng-submit="inserisci()">
+    <form name="insert" ng-submit="inserisci()">
       <div class="list">
         <label class="item item-input">
 
-          <input type="text" ng-model="titolo" placeholder="Titolo" >
+          <input type="text" name="titolo" ng-model="titolo" placeholder="Titolo" >
         </label>
 
-        <textarea ng-model="descrizione" placeholder="Descrizione"></textarea>
+        <textarea name="descrizione" ng-model="descrizione" placeholder="Descrizione"></textarea>
         <label class="item item-input">
-          <input type="number" ng-model="prezzo" placeholder="Prezzo">
+          <input type="number" name="prezzo" ng-model="prezzo" placeholder="Prezzo">
         </label>
 
-        <textarea ng-model="immagine" placeholder="Immagine"></textarea>
+        <textarea name="immagine" ng-model="immagine" placeholder="Immagine"></textarea>
 
         <label class="item item-input">
-          <input type="number" ng-model="id_categoria" placeholder="id_categoria">
+          <input type="number" name="id_categoria" ng-model="id_categoria" placeholder="id_categoria">
         </label>
         <label class="item item-input">
-          <input type="number" ng-model="id_posizione" placeholder="id_posizione">
+          <input type="number" name="id_posizione" ng-model="id_posizione" placeholder="id_posizione">
         </label>
         <label class="item item-input">
-          <input type="number" ng-model="id_comune" placeholder="id_comune">
+          <input type="number" name="id_comune" ng-model="id_comune" placeholder="id_comune">
         </label>
         <label class="item item-input">
-          <input type="number" ng-model="id_utente" placeholder="id_utente">
+          <input type="number" name="id_utente" ng-model="id_utente" placeholder="id_utente">
         </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Inserisci</button>
