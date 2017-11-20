@@ -1,20 +1,22 @@
 /*stile*/
 
-ion-view {
-}
-
-.annU1{
+.annU ion-item{
   padding:0px !important;
   margin-top:0px !important;
   border-top: 0 !important;
   border: 1px solid #0099cc !important;
 }
 
+.annU td{
+   vertical-align:bottom !important;
+   padding-right: 20px !important;
+}
+
 ion-item:first-child{
   border-top: 0px !important;
 }
 
-.annU1 span{
+.annU span{
   border:0px !important;
 }
 
@@ -23,5 +25,10 @@ h2{
   padding:1px !important;
 }
 
+.centra{
+  position: relative !important;
+  bottom:12px !important;
+  left: 5px !important;
+}
 
 /**/
