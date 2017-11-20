@@ -36,8 +36,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
     url: '/inserisciAnnuncio',
     views: {
       'menuContent': {
-        templateUrl: 'templates/InserisciAnnuncio/InserisciAnnuncio.html',
-        controller: 'InserisciAnnuncioCtrl'
+        templateUrl: 'templates/inserisciAnnuncio/inserisciAnnuncio.html',
+        controller: 'inserisciAnnuncioCtrl'
       }
     }
   })
@@ -79,7 +79,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
         }
       }
     })
-    
+
     .state('app.annuncio', {
       url: '/annuncio/:annuncioId',
       views: {

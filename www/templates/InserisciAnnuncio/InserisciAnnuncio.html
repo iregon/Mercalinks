@@ -1,19 +1,34 @@
-<!-- <ion-view view-title="Nuovo annuncio">
+ <ion-view view-title="Nuovo annuncio">
   <ion-content>
     <form ng-submit="inserisci()">
       <div class="list">
         <label class="item item-input">
-          <span class="input-label">Titolo</span>
-          <input type="text" ng-model="titolo">
+
+          <input type="text" ng-model="titolo" placeholder="Titolo" >
         </label>
 
+        <textarea ng-model="descrizione" placeholder="Descrizione"></textarea>
         <label class="item item-input">
-          <span class="input-label">Decrizione</span>
-          <input type="text" ng-model="descrizione">
+          <input type="number" ng-model="prezzo" placeholder="Prezzo">
+        </label>
+
+        <textarea ng-model="immagine" placeholder="Immagine"></textarea>
+
+        <label class="item item-input">
+          <input type="number" ng-model="id_categoria" placeholder="id_categoria">
+        </label>
+        <label class="item item-input">
+          <input type="number" ng-model="id_posizione" placeholder="id_posizione">
+        </label>
+        <label class="item item-input">
+          <input type="number" ng-model="id_comune" placeholder="id_comune">
+        </label>
+        <label class="item item-input">
+          <input type="number" ng-model="id_utente" placeholder="id_utente">
         </label>
         <label class="item">
           <button class="button button-block button-positive" type="submit">Inserisci</button>
         </label>
       </div>
   </ion-content>
-</ion-view> -->
+</ion-view>
