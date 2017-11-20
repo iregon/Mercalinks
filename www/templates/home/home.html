@@ -4,10 +4,10 @@
       <ion-item class="ann" ng-repeat="annuncio in annunci" href="#/app/annuncio/{{annuncio.id_annuncio}}">
         <table>
           <tr class="ann">
-            <td class="centra" rowspan="2">
-              <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" height="50" width="50" alt="" >
+            <td class="imgAnn" rowspan="2">
+                <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" height="60" width="60" alt="" >
             </td>
-            <td>
+            <td class="ann">
               <h2 class="blueDetail">{{annuncio.titolo}}</h2>
               <p style="width:16em;text-overflow: ellipsis">{{annuncio.descrizione}}</p>
             </td>
