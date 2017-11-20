@@ -52,11 +52,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.registrazione', {
+      url: '/registrazione',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/registrazione/registrazione.html',
+          controller: 'RegistrazioneCtrl'
         }
       }
     })
@@ -79,7 +80,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage'])
         }
       }
     })
-    
+
     .state('app.annuncio', {
       url: '/annuncio/:annuncioId',
       views: {
