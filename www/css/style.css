@@ -58,3 +58,7 @@ ion-item:first-child, label:first-child, .scroll-content{
   line-height: 60px;
   color: #FFF;
 }
+
+.menu_user_header {
+  width: 100%;
+}
