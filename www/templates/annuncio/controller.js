@@ -7,14 +7,14 @@ angular.module('starter')
 
   $scope.contatta = function(){
     var alertPopup = $ionicPopup.show({
-      templateUrl: 'contattaTemplate.html',
       scope: $scope,
       title: 'Contatta',
       buttons: [
         {
           text: 'Cancel'
-        }
-      ]
+         }
+       ],
+       templateUrl: 'templates/annuncio/contattaTemplate.html'
     });
     alertPopup.then(function(res) {
            console.log(res);
