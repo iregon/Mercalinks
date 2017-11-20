@@ -6,19 +6,21 @@ angular.module('starter')
   var id=$stateParams.annuncioId;
 
   $scope.contatta = function(){
-    var alertPopup = $ionicPopup.AnnuncioCtrl.create();
-    alertPopup.setTitle('Contatta');
-    /*alertPopup.addInput({
-      type: 'radio',
-      label: 'telefono',
-      value:'telefono'
-    });*/
-    alertPopup.addButton('Cancel');
+    var alertPopup = $ionicPopup.show({
+      templateUrl: 'contattaTemplate.html',
+      scope: $scope,
+      title: 'Contatta',
+      buttons: [
+        {
+          text: 'Cancel'
+        }
+      ]
+    });
     alertPopup.then(function(res) {
            console.log(res);
         });
   };
-  //console.log(id);
+
   $http.get(link,{
     params:{
       id: id,
