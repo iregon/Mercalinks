@@ -14,13 +14,11 @@ angular.module('starter')
     }
   }).then(function(response) {
     var annunci = response.data.annunci;
-    console.log(annunci);
     for(var i=0;i<annunci.length;i++){
       if(annunci[i].id_utente == idU){
         $scope.annunciU.push(annunci[i]);
       }
     }
-    console.log($scope.annunciU);
   }).catch(function(error) {
     console.log(error);
   });

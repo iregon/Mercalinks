@@ -1,69 +1,70 @@
  angular.module('starter')
 
  .controller('inserisciAnnuncioCtrl',function($scope,$http,$ionicPopup){
-   // $scope.controllo=function(){
-   //   if(insert.titolo.value===null){
-   //     var alertPopup=$ionicPopup.show({
-   //       title:'Inserisci il titolo'
-   //       buttons:[{
-   //         text:'OK',
-   //         type: 'button-default'
-   //
-   //   }]
-   // });
-   //   alertPopup.then(function(res){
-   //     console.log(res);
-   //
-   //     });
-   //   }else{
-   //     if(insert.descrizione.value===null){
-   //       var alertPopup=$ionicPopup.show({
-   //         title:'Inserisci la descrizione'
-   //         buttons:[{
-   //           text:'OK',
-   //           type: 'button-default'
-   //
-   //     }]
-   //       });
-   //       alertPopup.then(function(res){
-   //         console.log(res);
-   //       });
-   //     }
-   //     else{
-   //       if(insert.prezzo.value===null){
-   //         var alertPopup=$ionicPopup.show({
-   //           title:'Inserisci il prezzo'
-   //           buttons:[{
-   //             text:'OK',
-   //             type: 'button-default'
-   //
-   //       }]
-   //         });
-   //         alertPopup.then(function(res){
-   //           console.log(res);
-   //         });
-   //       }
-   //       else{
-   //         if(insert.immagine.value===null){
-   //           var alertPopup=$ionicPopup.show({
-   //             title:'Inserisci immagine'
-   //             buttons:[{
-   //               text:'OK',
-   //               type: 'button-default'
-   //
-   //         }]
-   //           });
-   //           alertPopup.then(function(res){
-   //             console.log(res);
-   //           });
-   //         }
-   //         else{
-   //           // $scope.messaggio();
-   //         }
-   //       }
-   //     }
-   //   }
-   // }
+   $scope.controllo=function(){
+     if(insert.titolo.value===""){
+       var alertPopup=$ionicPopup.show({
+         title:'Inserisci il titolo',
+         buttons:[{
+           text:'OK',
+           type: 'button-default'
+
+     }]
+   });
+     alertPopup.then(function(res){
+       console.log(res);
+
+       });
+     }else{
+       if(insert.descrizione.value===""){
+         var alertPopup=$ionicPopup.show({
+           title:'Inserisci la descrizione',
+           buttons:[{
+             text:'OK',
+             type: 'button-default'
+
+       }]
+         });
+         alertPopup.then(function(res){
+           console.log(res);
+         });
+       }
+       else{
+         if(insert.prezzo.value===""){
+           var alertPopup=$ionicPopup.show({
+             title:'Inserisci il prezzo',
+             buttons:[{
+               text:'OK',
+               type: 'button-default'
+
+         }]
+           });
+           alertPopup.then(function(res){
+             console.log(res);
+           });
+         }
+         else{
+           if(insert.immagine.value===""){
+             var alertPopup=$ionicPopup.show({
+               title:'Inserisci immagine',
+               buttons:[{
+                 text:'OK',
+                 type: 'button-default'
+
+           }]
+             });
+             alertPopup.then(function(res){
+               console.log(res);
+             });
+           }
+           else{
+
+              $scope.messaggio();
+           }
+         }
+       }
+     }
+   }
 
 
 
@@ -84,6 +85,7 @@
    };
 
    $scope.inserisci=function(){
+     $scope.controllo();
      var link= "http://mercalinks.altervista.org/insert1.php";
 
      $http.get(link, {

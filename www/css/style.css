@@ -87,6 +87,7 @@ ion-item:first-child{
 .ann h2{
   margin:0px !important;
   padding:1px !important;
+  white-space: initial !important;
 }
 
 .ann p{
