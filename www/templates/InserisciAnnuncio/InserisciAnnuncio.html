@@ -4,15 +4,21 @@
       <div class="list">
         <label class="item item-input">
 
-          <input type="text" name="titolo" ng-model="titolo" placeholder="Titolo" >
+          <input type="text" name="titolo" ng-model="titolo" ngMaxlength="40" placeholder="Titolo" >
+        </label>
+        <label class="item item-input">
+
+          <input type="text" name="descrizione" ng-model="descrizione" ngMaxlength="300" placeholder="Descrizione" >
         </label>
 
-        <textarea name="descrizione" ng-model="descrizione" placeholder="Descrizione"></textarea>
         <label class="item item-input">
           <input type="number" name="prezzo" ng-model="prezzo" placeholder="Prezzo">
         </label>
+        <label class="item item-input">
 
-        <textarea name="immagine" ng-model="immagine" placeholder="Immagine"></textarea>
+          <input type="text" name="immagine" ng-model="immagine" ngMaxlength="30" placeholder="Immagine" >
+        </label>
+
 
         <label class="item item-input">
           <input type="number" name="id_categoria" ng-model="id_categoria" placeholder="id_categoria">
@@ -27,7 +33,7 @@
           <input type="number" name="id_utente" ng-model="id_utente" placeholder="id_utente">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Inserisci</button>
+          <button ng-click="messaggio()" class="button button-block button-positive" type="submit">Inserisci</button>
         </label>
       </div>
   </ion-content>
