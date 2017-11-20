@@ -15,6 +15,7 @@
        console.log(res);
 
        });
+       return;
      }else{
        if(insert.descrizione.value===""){
          var alertPopup=$ionicPopup.show({
@@ -28,6 +29,7 @@
          alertPopup.then(function(res){
            console.log(res);
          });
+         return;
        }
        else{
          if(insert.prezzo.value===""){
@@ -42,6 +44,7 @@
            alertPopup.then(function(res){
              console.log(res);
            });
+           return;
          }
          else{
            if(insert.immagine.value===""){
@@ -56,6 +59,7 @@
              alertPopup.then(function(res){
                console.log(res);
              });
+             return;
            }
            else{
 
