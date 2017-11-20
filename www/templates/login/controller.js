@@ -25,6 +25,9 @@ angular.module('starter')
       $scope.res = response.data;
       console.log($scope.res);
       $localStorage.id_utente = $scope.res;
+      var date = new Date();
+      $localStorage.last_login = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
+      console.log($localStorage.last_login);
       window.location.replace("#/app/annunciUtente");
     }).catch(function(error) {
       console.log(error);
