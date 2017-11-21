@@ -24,4 +24,26 @@ angular.module('starter')
   });
 
 
+  $scope.doRefresh= function(){
+    $scope.annunciU = [];
+    $http.get(link, {
+      params: {
+        tabella: "annunci"
+      }
+    }).then(function(response) {
+      var annunci = response.data.annunci;
+      for(var i=0;i<annunci.length;i++){
+        if(annunci[i].id_utente == idU){
+          $scope.annunciU.push(annunci[i]);
+        }
+      }
+    }).catch(function(error) {
+      console.log(error);
+    }).finally(function() {
+     // Stop the ion-refresher from spinning
+     $scope.$broadcast('scroll.refreshComplete');
+   });
+  }
+
+
 });
