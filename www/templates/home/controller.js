@@ -30,7 +30,5 @@ angular.module('starter')
        $scope.$broadcast('scroll.refreshComplete');
      });
     }
-
-
-
+  }).then(function(response) {
 });
