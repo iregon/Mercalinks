@@ -9,7 +9,7 @@ angular.module('starter')
      }
    }).then(function(response) {
      $scope.annunci = response.data.annunci;
-     console.log($scope.annunci);
+     //console.log($scope.annunci);
    }).catch(function(error) {
      console.log(error);
    });
@@ -22,15 +22,16 @@ angular.module('starter')
         }
       }).then(function(response) {
         $scope.annunci = response.data.annunci;
-        console.log($scope.annunci);
+        //console.log($scope.annunci);
       }).catch(function(error) {
         console.log(error);
       }).finally(function() {
        // Stop the ion-refresher from spinning
        $scope.$broadcast('scroll.refreshComplete');
-     });
-    }
-
-
-
+  }).then(function(response) {
+    $scope.annunci = response.data.annunci;
+    //console.log($scope.annunci);
+  }).catch(function(error) {
+    console.log(error);
+  })};
 });

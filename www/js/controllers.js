@@ -13,7 +13,9 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage) {
+
+
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage, $http) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -41,15 +43,46 @@ angular.module('starter.controllers', [])
     // console.log($localStorage.id_utente.utente);
     var user_info = $localStorage.id_utente;
     if($localStorage.id_utente.utente != undefined) {
-      console.log("Logged");
+      //console.log("Logged");
       $scope.user_data = $localStorage.id_utente;
       return true;
     }
     else {
-      console.log("Not logged");
+      //console.log("Not logged");
       return false;
     }
   };
+
+  /*Categorie*/
+
+  var link = "http://mercalinks.altervista.org/select1.php";
+  $scope.shownGroup = null;
+  //filtro gli annunci tenendomi quelli dell'utente
+  $http.get(link, {
+    params: {
+      tabella: "categorie"
+    }
+  }).then(function(response) {
+    $scope.categorie = response.data.categorie;
+  }).catch(function(error) {
+    console.log(error);
+  });
+
+
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+      document.getElementById('catg').style="margin-bottom:0px";
+    } else {
+      $scope.shownGroup = group;
+      document.getElementById('catg').style="margin-bottom:10px";
+    }
+    // $ionicScrollDelegate.resize();
+  }
+
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  }
 })
 
 .controller('PlaylistsCtrl', function($scope, $http) {

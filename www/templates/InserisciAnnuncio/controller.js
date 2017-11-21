@@ -117,7 +117,7 @@
            url:"http://mercalinks.altervista.org/upload_image.php",
            data:{
              id:$localStorage.id_utente.utente.id_utente,
-             immagine:insert.immagine
+             immagine:insert.immagine.value
            }
          }).then(function(res){
 
