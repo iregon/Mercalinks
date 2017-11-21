@@ -31,3 +31,28 @@
 .annuncio_immagine {
   width: 100%;
 }
+
+.contatta{
+  width: auto;
+  height: 300px;
+}
+
+.contattaButton{
+  text-align: center;
+  vertical-align: middle;
+  position: center;
+  height: 80px;
+}
+
+.contattaCancel{
+  border: 0px solid #890000;
+  color: #FFFFFF;
+  background-color: #890000;
+  font-size: 1.3em;
+}
+
+.footerColor{
+  background-color: #890000;
+  width: auto;
+  height: 50px;
+}
