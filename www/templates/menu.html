@@ -28,17 +28,15 @@
           Home
         </ion-item>
 
+        <div ng-click="toggleGroup(group)">
         <ion-item>
-            <ion-item id="catg" class="item-icon-right" ng-click="toggleGroup(group)">Categorie
+
+            <ion-item id="catg" class="item-icon-right">Categorie
               <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
             </ion-item>
-            <ion-item class="sub-items" ng-repeat="item in categorie" ng-show="isGroupShown(group)">
+            <ion-item class="sub-items" ng-repeat="item in categorie" menu-close href="#/app/home/home" ng-show="isGroupShown(group)">
               {{item.nome}}
             </ion-item>
-        </ion-item>
-
-        <ion-item menu-close href="#/app/login">
-          Login
         </ion-item>
         <ion-item menu-close href="#/app/inserisciAnnuncio">
           Inserisci Annuncio
@@ -46,8 +44,12 @@
         <ion-item menu-close href="#/app/annunciUtente">
           Annunci Utente
         </ion-item>
-
-
+        <ion-item menu-close href="#/app/login" ng-hide="is_user_logged()">
+          Login
+        </ion-item>
+        <ion-item menu-close ng-click="logout()" ng-show="is_user_logged()">
+          Logout
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
