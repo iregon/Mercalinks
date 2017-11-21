@@ -63,12 +63,6 @@ angular.module('starter')
     console.log(error);
   });
 
-  // $scope.messageName = '';
-  // $scope.messageContent = '';
-  $scope.callUser = function(){
-    $scope.alertPopup.close();
-  };
-
   $scope.mailUser = function(){
     // var mail = 'mailto:';
     // console.log(mail);
