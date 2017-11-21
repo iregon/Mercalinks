@@ -1,5 +1,7 @@
 <ion-view view-title="Annunci di {{nomeU}}">
   <ion-content>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+
     <ion-list class="annunci">
       <ion-item class="ann" ng-repeat="annuncio in annunciU" href="#/app/annuncio/{{annuncio.id_annuncio}}">
         <table>
