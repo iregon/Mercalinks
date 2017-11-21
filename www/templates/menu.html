@@ -30,7 +30,6 @@
 
         <div ng-click="toggleGroup(group)">
         <ion-item>
-
             <ion-item id="catg" class="item-icon-right">Categorie
               <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
             </ion-item>
@@ -47,9 +46,9 @@
         <ion-item menu-close href="#/app/login" ng-hide="is_user_logged()">
           Login
         </ion-item>
-        <ion-item menu-close ng-click="logout()" ng-show="is_user_logged()">
+        <button class="logout" menu-close ng-click="logout()" ng-show="is_user_logged()">
           Logout
-        </ion-item>
+        </button>
       </ion-list>
     </ion-content>
   </ion-side-menu>
