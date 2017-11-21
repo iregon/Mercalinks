@@ -127,3 +127,15 @@ ion-item:first-child{
 .scroll-content {
   margin-top: 0;
 }
+
+/*stile categorie*/
+.item-icon-right{
+  margins:0px !important;
+  padding:0px !important;
+  margin-top: 0px !important;
+}
+.sub-items{
+  border:0px !important;
+  padding:5px !important;
+  margin-left: 5px !important;
+}
