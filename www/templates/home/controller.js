@@ -16,7 +16,6 @@ angular.module('starter')
  // })
 
     $scope.doRefresh= function(){
-      $scope.shownGroup = null;
       $http.get(link, {
         params: {
           tabella: "annunci"
