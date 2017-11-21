@@ -13,13 +13,15 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
+    <!-- <ion-header-bar class="bar-stable">
       <h1 class="title">Mercalinks</h1>
-    </ion-header-bar>
-
+    </ion-header-bar> -->
     <ion-content>
       <div class="menu_user_header" ng-show="is_user_logged()">
-        sdfghj
+        <div>
+          <h3>{{user_data.utente.nome}} {{user_data.utente.cognome}}</h3>
+          <p>{{user_data.utente.email}}</p>
+        </div>
       </div>
       <ion-list>
         <ion-item menu-close href="#/app/home/home">
