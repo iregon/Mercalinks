@@ -19,9 +19,17 @@ angular.module('starter')
     console.log($scope.buttons);
   };
 
-$scope.close=function(){
-  $scope.alertPopup.close();
-}
+  $scope.close=function(){
+    $scope.alertPopup.close();
+  }
+
+  $scope.chiamaUtente = function(){
+    $scope.alertPopup.close();
+  }
+
+  $scope.scriviUtente = function(){
+    $scope.alertPopup.close();
+  }
 
   $http.get(link,{
     params:{
