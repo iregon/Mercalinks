@@ -36,18 +36,18 @@
               {{item.nome}}
             </ion-item>
         </ion-item>
-
-        <ion-item menu-close href="#/app/login">
-          Login
-        </ion-item>
         <ion-item menu-close href="#/app/inserisciAnnuncio">
           Inserisci Annuncio
         </ion-item>
         <ion-item menu-close href="#/app/annunciUtente">
           Annunci Utente
         </ion-item>
-
-
+        <ion-item menu-close href="#/app/login" ng-hide="is_user_logged()">
+          Login
+        </ion-item>
+        <ion-item menu-close ng-click="logout()" ng-show="is_user_logged()">
+          Logout
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-side-menu>
