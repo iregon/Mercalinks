@@ -1,12 +1,18 @@
-<ion-view>
+<ion-view class="contatta">
   <ion-header-bar class="bar-positive">
      <h1 class="title">{{title}}</h1>
-   </ion-header-bar>
+  </ion-header-bar>
   <ion-content>
-    <input type="button" style="background-color:green; color:white" value="{{utente.num_tel}}" >
-    <input  type="button" style="background-color:blue; color:white" value="{{utente.email}}">
-    <input  type="button"  value="{{buttons[0].text}}" ng-click="close()">
-
+  <ion-item (click)="" class="contattaButton">
+    <img src="/templates/annuncio/phone.PNG">
+    {{utente.num_tel}}
+  </ion-item>
+  <ion-item (click)="" class="contattaButton">
+    <img src="/templates/annuncio/mail.PNG">
+    {{utente.email}}
+  </ion-item>
   </ion-content>
-
+  <ion-footer-bar class="footerColor">
+    <input  type="button"  value="{{buttons[0].text}}" ng-click="close()" class="contattaCancel">
+  </ion-footer-bar>
 </ion-view>
