@@ -57,16 +57,19 @@ angular.module('starter')
   $scope.doRegistrazione = function() {
     if(checkFields()) {
       var link = "http://mercalinks.altervista.org/registrazione.php";
+      var pass = CryptoJS.SHA1(reg.pass.value.trim());
+      var hash_Base64 = pass.toString(CryptoJS.enc.Base64);
+      console.log(hash_Base64);
       $http.get(link, {
         params: {
           nome: reg.nome.value,
           cognome: reg.cognome.value,
           email: reg.email.value,
-          pass: CryptoJS.SHA1(reg.pass.value),
+          pass: hash_Base64,
           tel: reg.tel.value
         }
       }).then(function(res) {
-        console.log("Utente registrato");
+        console.log(res.data);
       }).catch(function(error) {
         console.log(error);
       });
