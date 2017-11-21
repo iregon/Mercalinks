@@ -149,3 +149,6 @@ ion-item:first-child{
   padding:5px !important;
   margin-left: 5px !important;
 }
+.sub-items a{
+  padding:0px !important;
+}
