@@ -6,7 +6,7 @@ angular.module('starter')
   var id=$stateParams.annuncioId;
 
   $scope.contatta = function(){
-    var alertPopup = $ionicPopup.show({
+    $scope.alertPopup = $ionicPopup.show({
       scope: $scope,
       title: 'Contatta',
       buttons: [
@@ -16,10 +16,12 @@ angular.module('starter')
        ],
        templateUrl: 'templates/annuncio/contattaTemplate.html'
     });
-    alertPopup.then(function(res) {
-           console.log(res);
-        });
+    console.log($scope.buttons);
   };
+
+$scope.close=function(){
+  $scope.alertPopup.close();
+}
 
   $http.get(link,{
     params:{
