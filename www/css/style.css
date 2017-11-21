@@ -36,7 +36,7 @@ ion-item:first-child, label:first-child, .scroll-content{
   height: 60px;
 }
 
-.bar.bar-header{
+.bar.bar-header, .menu_user_header {
   background-color: #0099cc;
 }
 
@@ -108,6 +108,22 @@ ion-item:first-child{
 
 .menu_user_header {
   width: 100%;
-  background-color: #000;
+  /*background-color: #000;*/
   color: #fff;
+  height: 30%;
+  position: relative;
+}
+
+.menu_user_header div {
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+}
+
+.menu_user_header h3 {
+  color: #fff;
+}
+
+.scroll-content {
+  margin-top: 0;
 }

@@ -42,6 +42,7 @@ angular.module('starter.controllers', [])
     var user_info = $localStorage.id_utente;
     if($localStorage.id_utente.utente != undefined) {
       console.log("Logged");
+      $scope.user_data = $localStorage.id_utente;
       return true;
     }
     else {
