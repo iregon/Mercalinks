@@ -18,7 +18,10 @@
       <p class="annuncio_descrizione">{{annuncio.descrizione}}</p>
       <!--<p>Luogo: </P> -->
       <p class="annuncio_utente"><span class="annuncio_inserito_da">Inserito da</span>
-        <br>{{utente.nome}} {{utente.cognome}}</p>
+        <br>{{utente.nome}} {{utente.cognome}}
+        <br>
+        <span class="annuncio_inserito_da">Presso <br></span>{{comune.nome}}
+      </p>
     </div>
     <div>
     <center><button ng-click="contatta()" class="annuncio_contatta">Contatta</button></center>

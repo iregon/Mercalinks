@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup) {
+.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup, $window) {
 
   var link = "http://mercalinks.altervista.org/select2.php";
   var id=$stateParams.annuncioId;
@@ -20,14 +20,6 @@ angular.module('starter')
   };
 
   $scope.close=function(){
-    $scope.alertPopup.close();
-  }
-
-  $scope.chiamaUtente = function(){
-    $scope.alertPopup.close();
-  }
-
-  $scope.scriviUtente = function(){
     $scope.alertPopup.close();
   }
 
@@ -53,8 +45,36 @@ angular.module('starter')
       ).catch(function(error){
         console.log(error);
       });
+      $http.get(link,{
+        params:{
+          id: $scope.annuncio.id_comune,
+          tabella: "comuni"
+        }
+      }).then(
+        function(response){
+          $scope.comune=response.data.comuni;
+          console.log(response.data.comune);
+        }
+      ).catch(function(error){
+        console.log(error);
+      });
     }
   ).catch(function(error){
     console.log(error);
   });
+
+  // $scope.messageName = '';
+  // $scope.messageContent = '';
+  $scope.callUser = function(){
+    $scope.alertPopup.close();
+  };
+
+  $scope.mailUser = function(){
+    // var mail = 'mailto:';
+    // console.log(mail);
+    // $window.open(mail);
+    // console.log(mail);
+    $scope.alertPopup.close();
+  };
+
 });
