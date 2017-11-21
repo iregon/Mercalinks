@@ -82,6 +82,7 @@ ion-item:first-child{
   padding:10px !important;
   padding-left:65% !important;
   text-overflow: clip !important;
+  background-color: transparent !important;
 }
 
 .ann h2{
