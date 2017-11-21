@@ -1,5 +1,5 @@
  <ion-view view-title="Nuovo annuncio">
-  <ion-content>
+  <ion-content class="annunci">
     <form name="insert" ng-submit="inserisci()">
       <div class="list">
         <label class="item item-input">
@@ -16,12 +16,16 @@
         </label>
         <label class="item item-input">
 
-          <input type="file" name="immagine" ng-model="immagine" accept="image/*" capture="environment" >
+          <input type="file" name="immagine">
         </label>
 
 
         <label class="item item-input">
-          <input type="number" name="id_categoria" ng-model="id_categoria" placeholder="id_categoria">
+          <select name="id_categoria" ng-model="id_categoria"> <!--Supplement an id here instead of using 'name'-->
+              <option ng-repeat="categoria in categorie" value="{{categoria.id_categoria}}">
+                {{categoria.nome}}
+              </option>
+          </select>
         </label>
         <label class="item item-input">
           <input type="number" name="id_posizione" ng-model="id_posizione" placeholder="id_posizione">
@@ -30,9 +34,7 @@
           <input type="number" name="id_comune" ng-model="id_comune" placeholder="id_comune">
         </label>
         <label class="item item-input">
-          <input type="number" name="id_utente" ng-model="id_utente" placeholder="id_utente">
-        </label>
-        <label class="item">
+
           <button  class="button button-block button-positive" type="submit">Inserisci</button>
         </label>
       </div>

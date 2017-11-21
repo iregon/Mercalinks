@@ -22,13 +22,16 @@ angular.module('starter')
         str: hashDigest.ciphertext.toString(CryptoJS.enc.Base64)
       }
     }).then(function(response) {
-      $scope.res = response.data;
-      console.log($scope.res);
-      $localStorage.id_utente = $scope.res;
-      var date = new Date();
-      $localStorage.last_login = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
-      console.log($localStorage.last_login);
-      window.location.replace("#/app/annunciUtente");
+      var res = response.data;
+      console.log(res["status"]);
+      if(res["status"] === "OK") {
+        // console.log($scope.res);
+        $localStorage.id_utente = res;
+        var date = new Date();
+        $localStorage.last_login = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
+        console.log($localStorage.last_login);
+        window.location.href = "#/app/annunciUtente";
+      }
     }).catch(function(error) {
       console.log(error);
     });
