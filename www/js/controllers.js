@@ -39,6 +39,11 @@ angular.module('starter.controllers', [])
     $scope.modal.show();
   };
 
+  $scope.logout = function() {
+    $localStorage.id_utente = "";
+    window.location.href = "#/app/home";
+  };
+
   $scope.is_user_logged = function() {
     // console.log($localStorage.id_utente.utente);
     var user_info = $localStorage.id_utente;
