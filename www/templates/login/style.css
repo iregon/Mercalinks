@@ -1,14 +1,36 @@
 .login_input {
   font-size: 1em !important;
+  padding: 20px !important;
+  /*margin:15% !important;*/
+  margin-top:10% !important;
+/*  margin-bottom: 5% !important;*/
+  border: 1px solid lightgrey !important;
+
+  margin-left: 10%;
+  width: 80%;
 }
 
 .login_reg_button {
   text-align: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .login_reg_button a {
   text-decoration: none;
   font-size: 1.1em;
+}
+
+.item{
+  border:0px;
+}
+
+.entra{
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+}
+
+.list{
+  padding-top: 30%;
 }
