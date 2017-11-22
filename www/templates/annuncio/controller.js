@@ -23,8 +23,8 @@ angular.module('starter')
 
     cordova.plugins.email.open({
         to:      utente.email,
-        subject: 'Greetings',
-        body:    'How are you? Nice greetings from Leipzig'
+        subject: 'Mercalinks ad.',
+        body:    'I like it.'
     });
   };//end mailUser()
 
