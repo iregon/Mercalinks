@@ -1,6 +1,6 @@
  <ion-view view-title="Nuovo annuncio">
   <ion-content class="annunci">
-    <form name="insert" action="http://mercalinks.altervista.org/add_product.php" method="POST" enctype="multipart/form-data">
+    <form name="insert" ng-submit="inserisci()"  enctype="multipart/form-data">
       <div class="list">
         <label class="item item-input">
           <i class="icon ion-ios-pricetags"  ></i>
@@ -17,7 +17,7 @@
         </label>
         <label class="item item-input">
 
-          <input type="file" name="immagine">
+          <input type="file" name="immagine" ng-model="immagine">
         </label>
 
 
@@ -29,9 +29,9 @@
           </select>
 
         </label>
-        <label class="item item-input">
+        <!-- <label class="item item-input">
           <input type="number" name="id_utente" ng-model="id_utente" placeholder="id_utente">
-        </label>
+        </label> -->
         <label class="item item-input">
           <input type="number" name="id_posizione" ng-model="id_posizione" placeholder="id_posizione">
         </label>
