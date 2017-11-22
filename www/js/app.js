@@ -42,6 +42,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage', 'ng-file
     }
   })
 
+  .state('app.categoria', {
+    url: '/categoria/:id_categoria',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/categoria/categoria.html',
+        controller: 'CategoriaCtrl'
+      }
+    }
+  })
+
   .state('app.login', {
     url: '/login',
     views: {
