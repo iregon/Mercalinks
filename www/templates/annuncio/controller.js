@@ -19,17 +19,14 @@ angular.module('starter')
     console.log($scope.buttons);
   };
 
-  // $scope.mailUser = function(utente){
-  //
-  //   var email = {
-  //     to: utente.email,
-  //     subject: 'oggetto email',
-  //     body: 'messaggio messaggio messaggio',
-  //     isHtml: true
-  //   };
-  //
-  //   $cordovaEmailComposer.open(email).then(null, function (){});
-  // };//end mailUser()
+  $scope.mailUser = function(utente,annuncio){
+
+    cordova.plugins.email.open({
+        to:      utente.email,
+        subject: 'Mercalinks ad: '+ annuncio.titolo,
+        body:    ''
+    });
+  };//end mailUser()
 
   $scope.close=function(){
     $scope.alertPopup.close();

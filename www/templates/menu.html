@@ -33,7 +33,7 @@
             <ion-item id="catg" class="item-icon-right">Categorie
               <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
             </ion-item>
-            <ion-item class="sub-items" ng-repeat="item in categorie" menu-close href="#/app/home/home" ng-show="isGroupShown(group)">
+            <ion-item class="sub-items" ng-repeat="item in categorie" menu-close ng-show="isGroupShown(group)" href="#/app/categoria/{{item.id_categoria}}">
               {{item.nome}}
             </ion-item>
         </ion-item>

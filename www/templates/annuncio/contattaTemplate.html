@@ -7,7 +7,7 @@
     <img src="/templates/annuncio/phone.PNG">
     {{utente.num_tel}}
   </ion-item>
-  <ion-item ng-click="mailUser()" class="contattaButton" >
+  <ion-item ng-click="mailUser(utente,annuncio)" class="contattaButton" >
     <img src="/templates/annuncio/mail.PNG">
     {{utente.email}}
   </ion-item>
