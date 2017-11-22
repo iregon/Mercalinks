@@ -19,12 +19,12 @@ angular.module('starter')
     console.log($scope.buttons);
   };
 
-  $scope.mailUser = function(utente){
+  $scope.mailUser = function(utente,annuncio){
 
     cordova.plugins.email.open({
         to:      utente.email,
-        subject: 'Mercalinks ad.',
-        body:    'I like it.'
+        subject: 'Mercalinks ad: '+ annuncio.titolo,
+        body:    ''
     });
   };//end mailUser()
 
