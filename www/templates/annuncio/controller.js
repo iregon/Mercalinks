@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup, $window) {
+.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup, $window, $cordovaEmailComposer) {
 
   var link = "http://mercalinks.altervista.org/select2.php";
   var id=$stateParams.annuncioId;
@@ -18,6 +18,18 @@ angular.module('starter')
     });
     console.log($scope.buttons);
   };
+
+  $scope.mailUser = function(utente){
+
+    var email = {
+      to: utente.email,
+      subject: 'oggetto email',
+      body: 'messaggio messaggio messaggio',
+      isHtml: true
+    };
+
+    $cordovaEmailComposer.open(email).then(null, function (){});
+  };//end mailUser()
 
   $scope.close=function(){
     $scope.alertPopup.close();
@@ -62,27 +74,5 @@ angular.module('starter')
   ).catch(function(error){
     console.log(error);
   });
-
-
-  $scope.mailUser = function(){
-
-    var email = {
-      to: '',
-  //   cc: 'erika@mustermann.de',
-  //   bcc: ['john@doe.com', 'jane@doe.com'],
-      // attachments: [
-      //   'file://img/logo.png',
-      //   'res://icon.png',
-      //   'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
-      //   'file://README.pdf'
-      // ],
-      subject: 'oggetto email',
-      body: 'messaggio messaggio messaggio',
-      isHtml: true
-    };
-    $cordovaEmailComposer.open(email).then(null, function () {
-      console.log(email);
-    });
-  };
 
 });
