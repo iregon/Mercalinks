@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage', 'ng-file-model'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage', 'ng-file-model', 'ngFileUpload'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -38,6 +38,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage', 'ng-file
       'menuContent': {
         templateUrl: 'templates/inserisciAnnuncio/inserisciAnnuncio.html',
         controller: 'inserisciAnnuncioCtrl'
+      }
+    }
+  })
+
+  .state('app.categoria', {
+    url: '/categoria/:id_categoria',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/categoria/categoria.html',
+        controller: 'CategoriaCtrl'
       }
     }
   })
