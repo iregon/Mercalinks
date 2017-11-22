@@ -1,6 +1,6 @@
  angular.module('starter')
 
- .controller('inserisciAnnuncioCtrl',function($scope,$http,$ionicPopup,$localStorage){
+ .controller('inserisciAnnuncioCtrl',function($scope, $http, $ionicPopup, $localStorage, Upload){
    //$scope.testFile={};
    var link = "http://mercalinks.altervista.org/select1.php";
    $http.get(link, {
