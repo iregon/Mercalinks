@@ -116,6 +116,17 @@ ion-item:first-child{
     color: #fff !important;
 }
 
+/*scritta "home"*/
+.bar.bar-stable .title{
+  color: #fff;
+}
+.bar .title{
+  font-size: 19px;
+}
+.platform-android .bar .title {
+    line-height: 60px !important;
+}
+
 /*customizzazione menu*/
 
 .item{
@@ -140,11 +151,12 @@ ion-item:first-child{
   color: #fff;
 }
 
+
 .scroll-content {
   margin-top: 0;
 }
 
-.logout{
+.log{
   width: 200px;
   height: 50px;
   border-radius: 20px;
