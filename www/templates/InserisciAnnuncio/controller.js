@@ -106,7 +106,7 @@
        id_comune:insert.id_comune.value};
 
        console.dir($scope.testFile);
-       console.log("ciao",insert.titolo.value);
+       
 
        $http.post(link, {data}).then(function (res){
             $scope.response = res.data;

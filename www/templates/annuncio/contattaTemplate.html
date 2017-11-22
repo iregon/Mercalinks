@@ -3,11 +3,11 @@
      <h1 class="title">{{title}}</h1>
   </ion-header-bar>
   <ion-content>
-  <ion-item ng-href=tel:{{utente.num_tel}} class="contattaButton" class="marginTop">
+  <ion-item ng-href=tel:{{utente.num_tel}} class="contattaButton marginTop">
     <img src="/templates/annuncio/phone.PNG">
     {{utente.num_tel}}
   </ion-item>
-  <ion-item ng-click="mailUser()" class="contattaButton">
+  <ion-item ng-click="mailUser()" class="contattaButton" >
     <img src="/templates/annuncio/mail.PNG">
     {{utente.email}}
   </ion-item>
