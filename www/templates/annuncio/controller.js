@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup, $window) {
+.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup, $window, $cordovaEmailComposer) {
 
   var link = "http://mercalinks.altervista.org/select2.php";
   var id=$stateParams.annuncioId;
@@ -19,17 +19,17 @@ angular.module('starter')
     console.log($scope.buttons);
   };
 
-  // $scope.mailUser = function(utente){
-  //
-  //   var email = {
-  //     to: utente.email,
-  //     subject: 'oggetto email',
-  //     body: 'messaggio messaggio messaggio',
-  //     isHtml: true
-  //   };
-  //
-  //   $cordovaEmailComposer.open(email).then(null, function (){});
-  // };//end mailUser()
+  $scope.mailUser = function(utente){
+
+    var email = {
+      to: utente.email,
+      subject: 'oggetto email',
+      body: 'messaggio messaggio messaggio',
+      isHtml: true
+    };
+
+    $cordovaEmailComposer.open(email).then(null, function (){});
+  };//end mailUser()
 
   $scope.close=function(){
     $scope.alertPopup.close();
