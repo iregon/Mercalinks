@@ -14,3 +14,7 @@ h2.itemHome{
 
   background-color: transparent;
 }
+
+table.home_width_fit {
+  width: 100%;
+}
