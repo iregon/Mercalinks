@@ -1,0 +1,48 @@
+ <ion-view view-title="Nuovo annuncio">
+  <ion-content class="annunci">
+    <form name="insert" ng-submit="inserisci()"  enctype="multipart/form-data">
+      <div class="list">
+        <label class="item item-input">
+          <i class="icon ion-ios-pricetags"  ></i>
+          <input type="text" name="titolo" ng-model="titolo" ngMaxlength="40" placeholder="Titolo" style="padding-left:2%">
+        </label>
+        <label class="item item-input">
+          <i class="icon ion-android-create"></i>
+          <input type="text" name="descrizione" ng-model="descrizione" ngMaxlength="300" placeholder="Descrizione" style="padding-left:2%">
+        </label>
+
+        <label class="item item-input">
+          <i class="icon ion-social-euro"></i>
+          <input type="number" name="prezzo" ng-model="prezzo" placeholder="Prezzo" style="padding-left:2%">
+        </label>
+        <label class="item item-input">
+
+          <input type="file" name="immagine" ng-model="immagine">
+        </label>
+
+
+        <label class="item item-input">
+          <select name="id_categoria" ng-model="id_categoria"> <!--Supplement an id here instead of using 'name'-->
+              <option ng-repeat="categoria in categorie" value="{{categoria.id_categoria}}">
+                {{categoria.nome}}
+              </option>
+          </select>
+
+        </label>
+        <!-- <label class="item item-input">
+          <input type="number" name="id_utente" ng-model="id_utente" placeholder="id_utente">
+        </label> -->
+        <label class="item item-input">
+          <input type="number" name="id_posizione" ng-model="id_posizione" placeholder="id_posizione">
+        </label>
+        <label class="item item-input">
+          <input type="number" name="id_comune" ng-model="id_comune" placeholder="id_comune">
+        </label>
+        <label class="item item-input">
+
+          <button  class="button button-block button-positive" type="submit">Inserisci</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

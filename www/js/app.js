@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage', 'ng-file-model', 'ngFileUpload'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage','ngCordova', 'ng-file-model', 'ngFileUpload'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -99,7 +99,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage', 'ng-file
           controller: 'AnnuncioCtrl'
         }
       }
-    });
+    })
+
+    .state('app.edit', {
+      url: '/edit',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/edit/edit.html',
+          controller: 'EditCtrl'
+        }
+      }
+    })
+
+    ;
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');

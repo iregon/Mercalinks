@@ -1,6 +1,6 @@
  angular.module('starter')
 
- .controller('inserisciAnnuncioCtrl',function($scope, $http, $ionicPopup, $localStorage, Upload){
+ .controller('EditCtrl',function($scope,$http,$ionicPopup,$localStorage){
    //$scope.testFile={};
    var link = "http://mercalinks.altervista.org/select1.php";
    $http.get(link, {
@@ -93,13 +93,13 @@
    };
 
    $scope.inserisci=function(){
-
+     $scope.testFile = {};
      if($scope.controllo()){
        var link= 'http://mercalinks.altervista.org/add_product.php';
        var data={titolo:insert.titolo.value,
        descrizione:insert.descrizione.value,
        prezzo:insert.prezzo.value,
-       immagine:$scope.immagine,
+       immagine:insert.immagine.value,
        id_utente:$localStorage.id_utente.utente.id_utente,
        id_categoria:insert.id_categoria.value,
        id_posizione:insert.id_posizione.value,
@@ -108,21 +108,9 @@
        console.dir($scope.testFile);
        console.log("ciao",insert.titolo.value);
 
-       Upload.upload({
-          url: link,
-          data: data
-      }).then(function (resp) {
-          // console.log('Success ' + resp.config.data.immagine.name + 'uploaded. Response: ' + resp.data);
-      }, function (resp) {
-          console.log('Error status: ' + resp.status);
-      }, function (evt) {
-          var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-          // console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
-      });
-       // 
-       // $http.post(link, {data}).then(function (res){
-       //      $scope.response = res.data;
-       //  });
+       $http.post(link, {data}).then(function (res){
+            $scope.response = res.data;
+        });
 
      };
    }
