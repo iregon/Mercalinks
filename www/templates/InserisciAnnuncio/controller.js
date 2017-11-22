@@ -108,21 +108,21 @@
        console.dir($scope.testFile);
        console.log("ciao",insert.titolo.value);
 
-       Upload.upload({
-          url: link,
-          data: data
-      }).then(function (resp) {
-          // console.log('Success ' + resp.config.data.immagine.name + 'uploaded. Response: ' + resp.data);
-      }, function (resp) {
-          console.log('Error status: ' + resp.status);
-      }, function (evt) {
-          var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-          // console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
-      });
-      //
-      //  $http.post(link, {data}).then(function (res){
-      //       $scope.response = res.data;
-      //   });
+      //  Upload.upload({
+      //     url: link,
+      //     data: data
+      // }).then(function (resp) {
+      //     // console.log('Success ' + resp.config.data.immagine.name + 'uploaded. Response: ' + resp.data);
+      // }, function (resp) {
+      //     console.log('Error status: ' + resp.status);
+      // }, function (evt) {
+      //     var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+      //     // console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+      // });
+
+       $http.post(link, {data}).then(function (res){
+            $scope.response = res.data;
+        });
 
      };
    }
