@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
 .factory('Annunci', function(){
   var annunci = {};
@@ -93,6 +93,6 @@ angular.module('starter.controllers', [])
     return $scope.shownGroup === group;
   }
 
-  
+
 
 })
