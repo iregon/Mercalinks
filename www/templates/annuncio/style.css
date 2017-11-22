@@ -57,6 +57,7 @@
   vertical-align: middle;
   /*position: center;*/
   height: 80px;
+  border-color: none;
 }
 
 .contattaCancel{
@@ -79,6 +80,10 @@
 .marginBottom{
   margin-bottom: 14px;
 }
+
+/*.marginBottom2{
+  margin-bottom: -50px;
+}*/
 
 p{
   margin-left: 8px;
