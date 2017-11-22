@@ -78,12 +78,12 @@ angular.module('starter.controllers', [])
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
       document.getElementById('catg').style="margin-bottom:0px";
-      document.getElementById('login').style="margin-top:129%";
+      document.getElementById('login').style="margin-top:149%";
       document.getElementById('logout').style="margin-top:60%";
     } else {
       $scope.shownGroup = group;
       document.getElementById('catg').style="margin-bottom:10px";
-      document.getElementById('login').style="margin-top:58.5%";
+      document.getElementById('login').style="margin-top:78.5%";
       document.getElementById('logout').style="margin-top:5%";
     }
     // $ionicScrollDelegate.resize();
@@ -92,20 +92,7 @@ angular.module('starter.controllers', [])
   $scope.isGroupShown = function(group) {
     return $scope.shownGroup === group;
   }
-})
 
-.controller('PlaylistsCtrl', function($scope, $http) {
-  // $scope.playlists = [
-  //   { title: 'Reggae', id: 1 },
-  //   { title: 'Chill', id: 2 },
-  //   { title: 'Dubstep', id: 3 },
-  //   { title: 'Indie', id: 4 },
-  //   { title: 'Rap', id: 5 },
-  //   { title: 'Cowbell', id: 6 }
-  // ];
+  
 
 })
-/*.controller('AnnuncioCtrl', function($scope, $stateParams) {
-
-});
-*/
