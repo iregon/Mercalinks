@@ -95,34 +95,22 @@
    $scope.inserisci=function(){
      $scope.testFile = {};
      if($scope.controllo()){
-       var link= "http://mercalinks.altervista.org/insert1.php";
+       var link= 'http://mercalinks.altervista.org/add_product.php';
+       var data={titolo:insert.titolo.value,
+       descrizione:insert.descrizione.value,
+       prezzo:insert.prezzo.value,
+       immagine:insert.immagine.value,
+       id_utente:$localStorage.id_utente.utente.id_utente,
+       id_categoria:insert.id_categoria.value,
+       id_posizione:insert.id_posizione.value,
+       id_comune:insert.id_comune.value};
+
        console.dir($scope.testFile);
+       console.log("ciao",insert.titolo.value);
 
-       $http.get(link, {
-         params: {
-           tabella:"annunci",
-           titolo:insert.titolo.value,
-           descrizione:insert.descrizione.value,
-           prezzo:insert.prezzo.value,
-
-           id_categoria:insert.id_categoria.value,
-           id_posizione:insert.id_posizione.value,
-           id_comune:insert.id_comune.value,
-           id_utente:$localStorage.id_utente.utente.id_utente
-
-         }
-       }).then(function(response){
-         $http({
-           method:"POST",
-           url:"http://mercalinks.altervista.org/upload_image.php",
-           data:{
-             id:$localStorage.id_utente.utente.id_utente,
-             immagine:insert.immagine.value
-           }
-         }).then(function(res){
-
-         });
-       });
+       $http.post(link, {data}).then(function (res){
+            $scope.response = res.data;
+        });
 
      };
    }
