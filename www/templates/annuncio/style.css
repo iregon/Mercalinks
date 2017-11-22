@@ -3,20 +3,26 @@
   font-size: 2.5em;
   text-align: left;
   line-height: normal;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .annuncio_prezzo{
   text-align: right;
   color: #890000;
   width: 100%;
   font-size: 2.5em;
+  padding-right: 10px;
 }
 .annuncio_descrizione{
   font-size: 1.3em;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .annuncio_utente{
   font-size: 1.3em;
   font-weight: bold;
   text-align: right;
+  margin-right: 10px;
 }
 .annuncio_inserito_da{
   font-size: 0.8em
@@ -27,6 +33,7 @@
   background-color: #890000;
   font-size: 2em;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .annuncio_immagine {
