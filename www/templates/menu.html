@@ -43,10 +43,10 @@
         <ion-item menu-close href="#/app/annunciUtente">
           Annunci Utente
         </ion-item>
-        <ion-item menu-close href="#/app/login" ng-hide="is_user_logged()">
+        <button id="login" style="margin-top:129%" class="log" style="" menu-close onClick="window.location.href='#/app/login'" ng-hide="is_user_logged()">
           Login
-        </ion-item>
-        <button class="logout" menu-close ng-click="logout()" ng-show="is_user_logged()">
+        </button>
+        <button id="logout" class="log" menu-close ng-click="logout()" ng-show="is_user_logged()">
           Logout
         </button>
       </ion-list>

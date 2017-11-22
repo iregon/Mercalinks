@@ -78,9 +78,13 @@ angular.module('starter.controllers', [])
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
       document.getElementById('catg').style="margin-bottom:0px";
+      document.getElementById('login').style="margin-top:129%";
+      document.getElementById('logout').style="margin-top:60%";
     } else {
       $scope.shownGroup = group;
       document.getElementById('catg').style="margin-bottom:10px";
+      document.getElementById('login').style="margin-top:58.5%";
+      document.getElementById('logout').style="margin-top:5%";
     }
     // $ionicScrollDelegate.resize();
   }
