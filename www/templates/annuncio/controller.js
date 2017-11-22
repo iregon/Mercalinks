@@ -63,12 +63,26 @@ angular.module('starter')
     console.log(error);
   });
 
+
   $scope.mailUser = function(){
-    // var mail = 'mailto:';
-    // console.log(mail);
-    // $window.open(mail);
-    // console.log(mail);
-    $scope.alertPopup.close();
+
+    var email = {
+      to: '',
+  //   cc: 'erika@mustermann.de',
+  //   bcc: ['john@doe.com', 'jane@doe.com'],
+      // attachments: [
+      //   'file://img/logo.png',
+      //   'res://icon.png',
+      //   'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
+      //   'file://README.pdf'
+      // ],
+      subject: 'oggetto email',
+      body: 'messaggio messaggio messaggio',
+      isHtml: true
+    };
+    $cordovaEmailComposer.open(email).then(null, function () {
+      console.log(email);
+    });
   };
 
 });
