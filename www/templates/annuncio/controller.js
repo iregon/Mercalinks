@@ -19,6 +19,18 @@ angular.module('starter')
     console.log($scope.buttons);
   };
 
+  // $scope.mailUser = function(utente){
+  //
+  //   var email = {
+  //     to: utente.email,
+  //     subject: 'oggetto email',
+  //     body: 'messaggio messaggio messaggio',
+  //     isHtml: true
+  //   };
+  //
+  //   $cordovaEmailComposer.open(email).then(null, function (){});
+  // };//end mailUser()
+
   $scope.close=function(){
     $scope.alertPopup.close();
   }
@@ -62,13 +74,5 @@ angular.module('starter')
   ).catch(function(error){
     console.log(error);
   });
-
-  $scope.mailUser = function(){
-    // var mail = 'mailto:';
-    // console.log(mail);
-    // $window.open(mail);
-    // console.log(mail);
-    $scope.alertPopup.close();
-  };
 
 });

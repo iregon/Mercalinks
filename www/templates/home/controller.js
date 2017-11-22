@@ -22,7 +22,7 @@ angular.module('starter')
         }
       }).then(function(response) {
         $scope.annunci = response.data.annunci;
-        console.log($scope.annunci);
+        //console.log($scope.annunci);
       }).catch(function(error) {
         console.log(error);
       }).finally(function() {
@@ -30,7 +30,5 @@ angular.module('starter')
        $scope.$broadcast('scroll.refreshComplete');
      });
     }
-
-
 
 });

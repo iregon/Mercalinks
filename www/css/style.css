@@ -78,8 +78,8 @@ ion-item:first-child, label:first-child, .scroll-content{
 
 .ann td{
    vertical-align:bottom !important;
-   padding-right: 20px !important;
-   padding-left:10px !important;
+   /*padding-right: 20px !important;
+   padding-left:10px !important;*/
 }
 
 ion-item:first-child{
@@ -89,31 +89,59 @@ ion-item:first-child{
 .ann span{
   border:0px !important;
   padding:10px !important;
-  padding-left:65% !important;
+  /*padding-left:65% !important;*/
   text-overflow: clip !important;
   background-color: transparent !important;
+  text-align: right;
 }
 
 .ann h2{
   margin:0px !important;
   padding:1px !important;
+  padding-left: 10px !important;
   white-space: initial !important;
 }
 
 .ann p{
   padding-left:10px !important;
+  width: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .imgAnn{
-  position: relative !important;
+  /*position: relative !important;*/
   bottom:5px !important;
   left: 5px !important;
   border: 0.1px solid lightgrey;
+  padding: 15px;
+  width: 80px;
+  height: 80px;
+}
+
+.imgAnn img {
+  width: 70px;
+  height: 70px;
+}
+
+.item-content {
+  padding: 16px !important;
 }
 
 /*colore bianco 3 linee menù*/
 .bar-stable .button.button-clear {
     color: #fff !important;
+}
+
+/*scritta "home"*/
+.bar.bar-stable .title{
+  color: #fff;
+}
+.bar .title{
+  font-size: 19px;
+}
+.platform-android .bar .title {
+    line-height: 60px !important;
 }
 
 /*customizzazione menu*/
@@ -140,11 +168,12 @@ ion-item:first-child{
   color: #fff;
 }
 
+
 .scroll-content {
   margin-top: 0;
 }
 
-.logout{
+.log{
   width: 200px;
   height: 50px;
   border-radius: 20px;

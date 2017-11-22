@@ -4,7 +4,13 @@
       <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" alt="" class="annuncio_immagine">
     </div>
 
-    <table>
+    <p class="annuncio_titolo">
+      {{annuncio.titolo}}
+    </p>
+    <p class="annuncio_prezzo">
+      €{{annuncio.prezzo}}
+    </p>
+    <!-- <table>
       <tr>
         <th class="annuncio_titolo">
           {{annuncio.titolo}}
@@ -13,7 +19,7 @@
           €{{annuncio.prezzo}}
         </th>
       </tr>
-    </table>
+    </table> -->
     <!--linea grigia per Rocca-->
     <hr>
 
@@ -27,7 +33,7 @@
       </p>
     </div>
     <div>
-    <center><button ng-click="contatta()" class="annuncio_contatta">Contatta</button></center>
-    </div>
+    <center class="marginBottom"><button ng-click="contatta()" class="annuncio_contatta">Contatta</button></center>
+  </div>
   </ion-content>
 </ion-view>
