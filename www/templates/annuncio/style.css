@@ -30,8 +30,8 @@
 }
 
 .annuncio_immagine {
-  max-width: 100% !important;
-  height: 40% !important;
+  /*max-width: 100% !important;*/
+  height: 300px !important;
   margin-top: 16px !important;
 }
 
