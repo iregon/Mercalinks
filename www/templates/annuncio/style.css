@@ -5,6 +5,7 @@
   line-height: normal;
   margin-left: 5px;
   margin-right: 5px;
+  color: #0099cc;
 }
 .annuncio_prezzo{
   text-align: right;
@@ -17,15 +18,18 @@
   font-size: 1.3em;
   margin-left: 10px;
   margin-right: 10px;
+  color: grey;
 }
 .annuncio_utente{
   font-size: 1.3em;
   font-weight: bold;
   text-align: right;
   margin-right: 10px;
+  color: #890000;
 }
 .annuncio_inserito_da{
-  font-size: 0.8em
+  font-size: 0.8em;
+  color: #000000;
 }
 .annuncio_contatta{
   border: 9px solid #890000;
