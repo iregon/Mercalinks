@@ -93,6 +93,7 @@ ion-item:first-child{
   text-overflow: clip !important;
   background-color: transparent !important;
   text-align: right;
+  float: right;
 }
 
 .ann h2{
@@ -148,6 +149,7 @@ ion-item:first-child{
 
 .item{
   padding: 0px;
+  border-color: transparent;
 }
 
 .menu_user_header {
