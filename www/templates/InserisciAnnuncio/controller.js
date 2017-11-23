@@ -21,7 +21,7 @@
      if (nome_comune.length >= 3) {
        $http.get(link, {
          params: {
-           nome:nome_comune
+           nome: nome_comune
          }
        }).then(function(response) {
          $scope.comuni = response.data.comuni;

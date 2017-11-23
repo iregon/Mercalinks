@@ -18,3 +18,7 @@ h2.itemHome{
 table.home_width_fit {
   width: 100%;
 }
+
+label.hidden_input {
+  visibility: hidden;
+}
