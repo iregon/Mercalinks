@@ -1,4 +1,4 @@
-.item-complex span.itemHome{
+/*span.itemHome{
   text-align: right;
   padding: 0px;
   margin: 0px;
@@ -13,12 +13,8 @@ h2.itemHome{
   margin : 0px;
 
   background-color: transparent;
-}
+}*/
 
 table.home_width_fit {
   width: 100%;
-}
-
-label.hidden_input {
-  display: none;
 }

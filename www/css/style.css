@@ -27,7 +27,7 @@
 }
 
 /*allinea il primo item della lista alla navbar*/
-ion-item:first-child, label:first-child, .scroll-content{
+label:first-child, .scroll-content{
   margin-top: 0px;
   border: 0px;
 }
@@ -104,14 +104,14 @@ ion-item:first-child, label:first-child, .scroll-content{
    padding-left:10px !important;*/
    vertical-align:bottom;
 }
-.ann ion-item:first-child{
+/*.ann ion-item:first-child{
   margin-top: 20px;
 }
 
 
 ion-item:first-child{
   border-top: 0px;
-}
+}*/
 
 .ann span{
   border:0px;
@@ -160,7 +160,7 @@ ion-item:first-child{
 
 .item-content {
   padding: 16px;
-
+  margin: 0px;
   padding-top: 2px !important;
   padding-bottom: 2px !important;
 
@@ -207,6 +207,12 @@ ion-item:first-child{
   color: #fff;
 }
 
+.menu_user_header h2{
+  color: #fff;
+  margin-left: 3px;
+  margin-bottom: 50px;
+}
+
 
 .scroll-content {
   margin-top: 0;
@@ -229,6 +235,7 @@ ion-item:first-child{
   margin:16px !important;
   padding:0px !important;
   background-color: transparent;
+  line-height: 22px;
 }
 .sub-items{
   border:0px;
@@ -247,5 +254,6 @@ ion-item:first-child{
 .menu .item-content{
   margin:16px;
   margin-left: 0px;
+
 
 }
