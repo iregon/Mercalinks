@@ -31,7 +31,7 @@
        });
      }
      else {
-       
+
      }
    }
 
@@ -167,7 +167,7 @@
        id_comune:insert.id_comune.value};
 
        console.dir($scope.testFile);
-       console.log("ciao",insert.titolo.value);
+       // console.log("ciao",insert.titolo.value);
 
        Upload.upload({
           url: link,
