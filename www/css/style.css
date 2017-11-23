@@ -70,25 +70,27 @@ ion-item:first-child, label:first-child, .scroll-content{
 
 /*stile annunci*/
 .ann ion-item{
-<<<<<<< HEAD
+
   padding:0px !important;
   margin-top:14px;
   margin-left:10px!important;
   border-top: 0px !important;
   border: 1px solid #0099cc !important;
-=======
+
   padding:0px;
   margin-top:14px;
   border-top: 0px;
   border: 1px solid #0099cc;
->>>>>>> 5ba2d9d848a0ffeb62e49da85625687926b07476
+
 }
 
 
 
 .ann .item-content{
   padding-left: 13px;
+  padding-top: 13px;
   margin: 0px;
+  margin-bottom: -10px;
 }
 
 /*.ann a:first-child{
@@ -96,14 +98,11 @@ ion-item:first-child, label:first-child, .scroll-content{
 }*/
 
 .ann td{
-<<<<<<< HEAD
-   vertical-align:middle !important;
+   /*vertical-align:middle !important;*/
    /*margin: 0px;*/
    /*padding-right: 20px !important;
    padding-left:10px !important;*/
-=======
    vertical-align:bottom;
->>>>>>> 5ba2d9d848a0ffeb62e49da85625687926b07476
 }
 .ann ion-item:first-child{
   margin-top: 20px;
@@ -138,17 +137,16 @@ ion-item:first-child{
 }
 
 .imgAnn{
-<<<<<<< HEAD
+
   /*position: relative !important;*/
   bottom:5px !important;
   left: 5px !important;
   /*border: 0.1px solid lightgrey;*/
   padding: 10px;
-=======
+
   bottom:5px;
   left: 5px;
   padding: 15px;
->>>>>>> 5ba2d9d848a0ffeb62e49da85625687926b07476
   width: 80px;
   height: 80px;
 }
@@ -162,11 +160,10 @@ ion-item:first-child{
 
 .item-content {
   padding: 16px;
-<<<<<<< HEAD
+
   padding-top: 2px !important;
   padding-bottom: 2px !important;
-=======
->>>>>>> 5ba2d9d848a0ffeb62e49da85625687926b07476
+
 }
 
 /*colore bianco 3 linee menù*/
@@ -229,8 +226,8 @@ ion-item:first-child{
 
 /*stile categorie*/
 .item-icon-right{
-  margin:16px;
-  padding:0px;
+  margin:16px !important;
+  padding:0px !important;
   background-color: transparent;
 }
 .sub-items{
@@ -245,4 +242,10 @@ ion-item:first-child{
 }
 .sub-items a{
   padding:0px !important;
+}
+
+.menu .item-content{
+  margin:16px;
+  margin-left: 0px;
+
 }
