@@ -78,13 +78,13 @@ angular.module('starter.controllers', ['ngCordova'])
     if ($scope.isGroupShown(group)) {
       $scope.shownGroup = null;
       document.getElementById('catg').style="margin-bottom:0px";
-      document.getElementById('login').style="margin-top:80%";
-      document.getElementById('logout').style="margin-top:60%";
+      document.getElementById('login').style="margin-top:100%";
+      document.getElementById('logout').style="margin-top:80%";
     } else {
       $scope.shownGroup = group;
       document.getElementById('catg').style="margin-bottom:10px";
-      document.getElementById('login').style="margin-top:9.5%";
-      document.getElementById('logout').style="margin-top:5%";
+      document.getElementById('login').style="margin-top:29.5%";
+      document.getElementById('logout').style="margin-top:9.5%";
     }
     // $ionicScrollDelegate.resize();
   }
