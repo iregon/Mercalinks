@@ -14,8 +14,33 @@
      console.log(error);
    });
 
+   $scope.loadComuni=function(){
+     var link = "http://mercalinks.altervista.org/find_comuni_by_name.php";
+     var nome_comune = document.getElementById("comune").value;
+
+     if (nome_comune.length >= 3) {
+       $http.get(link, {
+         params: {
+           nome: nome_comune
+         }
+       }).then(function(response) {
+         $scope.comuni = response.data.comuni;
+         console.log($scope.comuni);
+       }).catch(function(error) {
+         console.log(error);
+       });
+     }
+     else {
+       
+     }
+   }
+
+   $scope.getUserId = function() {
+     return $localStorage.id_utente.utente.id_utente;
+   }
 
    $scope.controllo=function(){
+     console.log(insert.id_categoria.value);
      if(insert.titolo.value===""){
        var alertPopup=$ionicPopup.show({
          title:'Inserisci il titolo',
@@ -66,7 +91,41 @@
             return false;
          }
          else{
-        $scope.messaggio();
+           if(insert.id_categoria.value===undefined){
+
+             var alertPopup=$ionicPopup.show({
+               title:'Seleziona la categoria',
+               buttons:[{
+                 text:'OK',
+                 type: 'button-default'
+
+           }]
+
+             });
+             alertPopup.then(function(res){
+               console.log(res);
+
+             });
+     return false;
+           }
+           else{
+             if(insert.id_comune.value===""){
+               var alertPopup=$ionicPopup.show({
+                 title:'Seleziona il comune',
+                 buttons:[{
+                   text:'OK',
+                   type: 'button-default'
+
+             }]
+
+               });
+               alertPopup.then(function(res){
+                 console.log(res);
+
+               });
+       return false;
+             }
+           }
          }
        }
      }
@@ -78,19 +137,21 @@
 
 
    $scope.messaggio=function(){
-     var alertPopup=$ionicPopup.show({
+     if($scope.controllo()){
+      var alertPopup=$ionicPopup.show({
        title:'<img src="/img/tick.png">',
        subTitle:'<h4>Annuncio inserito</h4>',
        buttons:[{
          text:'OK',
          type: 'button-default'
 
-   }]
+        }]
      });
      alertPopup.then(function(res){
        console.log(res);
      });
    };
+ };
 
    $scope.inserisci=function(){
 
@@ -119,7 +180,7 @@
           var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
           // console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
       });
-       // 
+       //
        // $http.post(link, {data}).then(function (res){
        //      $scope.response = res.data;
        //  });

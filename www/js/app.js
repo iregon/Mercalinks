@@ -111,6 +111,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage','ngCordov
       }
     })
 
+    .state('app.preferiti', {
+      url: '/preferiti',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/preferiti/preferiti.html',
+          controller: 'PreferitiCtrl'
+        }
+      }
+    })
+
     ;
 
   // if none of the above states are matched, use this as the fallback
