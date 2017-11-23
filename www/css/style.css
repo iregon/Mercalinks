@@ -71,16 +71,33 @@ ion-item:first-child, label:first-child, .scroll-content{
 /*stile annunci (immagine centrata, bordo blu e spaziature varie)*/
 .ann ion-item{
   padding:0px !important;
-  margin-top:14px !important;
+  margin-top:14px;
+  margin-left:10px!important;
   border-top: 0px !important;
   border: 1px solid #0099cc !important;
 }
 
+
+
+.ann .item-content{
+  padding-left: 13px;
+  margin: 0px;
+}
+
+/*.ann a:first-child{
+    margin-top: 24px !important;
+}*/
+
 .ann td{
-   vertical-align:bottom !important;
+   vertical-align:middle !important;
+   /*margin: 0px;*/
    /*padding-right: 20px !important;
    padding-left:10px !important;*/
 }
+.ann ion-item:first-child{
+  margin-top: 20px;
+}
+
 
 ion-item:first-child{
   border-top: 0px !important;
@@ -115,7 +132,7 @@ ion-item:first-child{
   bottom:5px !important;
   left: 5px !important;
   /*border: 0.1px solid lightgrey;*/
-  padding: 15px;
+  padding: 10px;
   width: 80px;
   height: 80px;
 }
@@ -127,7 +144,7 @@ ion-item:first-child{
 }
 
 .item-content {
-  padding: 16px !important;
+  padding: 16px;
   padding-top: 2px !important;
   padding-bottom: 2px !important;
 }
