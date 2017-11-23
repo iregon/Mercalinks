@@ -40,6 +40,7 @@ angular.module('starter')
   }).then(
     function(response){
       $scope.annuncio=response.data.annunci;
+      $scope.annuncio.data_in = $scope.annuncio.data_in.split(" ")[0];
       console.log(response.data.annuncio);
       $http.get(link,{
         params:{
