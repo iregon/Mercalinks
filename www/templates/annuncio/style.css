@@ -41,9 +41,10 @@
 }
 
 .annuncio_immagine {
-  /*max-width: 100% !important;*/
+  max-width: 100% !important;
   height: 300px !important;
   margin-top: 16px !important;
+  object-fit: cover;
 }
 
 .annuncio_image_container {
