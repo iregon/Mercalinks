@@ -18,13 +18,16 @@
     </ion-header-bar> -->
     <ion-content>
       <div class="menu_user_header" >
+        <div ng-hide="is_user_logged()">
+          <h2>Mercalinks</h2>
+        </div>
         <div ng-show="is_user_logged()">
           <h3>{{user_data.utente.nome}} {{user_data.utente.cognome}}</h3>
           <p>{{user_data.utente.email}}</p>
         </div>
       </div>
       <ion-list>
-        <ion-item menu-close href="#/app/home/home">
+        <ion-item class="menu" menu-close href="#/app/home/home">
           Home
         </ion-item>
 
@@ -38,14 +41,20 @@
             </ion-item>
         </ion-item>
       </div>
-        <ion-item menu-close href="#/app/preferiti" ng-show="is_user_logged()">
+
+        <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
           Preferiti
         </ion-item>
-        <ion-item menu-close href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
+        <ion-item menu-close class="menu" href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
+
           Inserisci Annuncio
         </ion-item>
+<<<<<<< HEAD
 
         <ion-item menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
+=======
+        <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
+>>>>>>> 7c740498daf9c6d06fe0d98ce2c20590d595ee69
           Annunci Utente
         </ion-item>
 
