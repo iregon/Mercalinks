@@ -20,5 +20,5 @@ table.home_width_fit {
 }
 
 label.hidden_input {
-  visibility: hidden;
+  display: none;
 }

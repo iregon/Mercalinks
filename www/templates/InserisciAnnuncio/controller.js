@@ -30,6 +30,13 @@
          console.log(error);
        });
      }
+     else {
+       
+     }
+   }
+
+   $scope.getUserId = function() {
+     return $localStorage.id_utente.utente.id_utente;
    }
 
    $scope.controllo=function(){
