@@ -31,7 +31,7 @@
        });
      }
      else {
-       
+
      }
    }
 
@@ -43,7 +43,8 @@
      console.log(insert.id_categoria.value);
      if(insert.titolo.value===""){
        var alertPopup=$ionicPopup.show({
-         title:'Inserisci il titolo',
+         title:'',
+         template:'Inserisci il titolo',
          buttons:[{
            text:'OK',
            type: 'button-default'
@@ -167,7 +168,7 @@
        id_comune:insert.id_comune.value};
 
        console.dir($scope.testFile);
-       console.log("ciao",insert.titolo.value);
+       // console.log("ciao",insert.titolo.value);
 
        Upload.upload({
           url: link,

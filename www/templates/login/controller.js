@@ -1,10 +1,23 @@
 angular.module('starter')
 
-.controller('LoginCtrl', function($scope, $http, $timeout, $localStorage) {
+.controller('LoginCtrl', function($scope, $http, $timeout, $localStorage, $ionicPopup) {
 
   $scope.closeLogin = function() {
     // $scope.modal.hide();
   };
+
+  function showPopup(text) {
+    var alertPopUp = $ionicPopup.show({
+      title:"<img src='/img/error.png'>",
+      subTitle: "<h4>" + text + "</h4>",
+      buttons: [{
+        text: "OK",
+        type: "button-default"
+      }]
+    }).then(function(res) {
+
+    });
+  }
 
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
@@ -32,10 +45,11 @@ angular.module('starter')
         console.log($localStorage.last_login);
         window.location.href = "#/app/annunciUtente";
       }
+      else {
+        showPopup("E-mail e/o password errati");
+      }
     }).catch(function(error) {
       console.log(error);
     });
-
-    $scope.closeLogin();
   };
 });

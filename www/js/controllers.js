@@ -62,7 +62,7 @@ angular.module('starter.controllers', ['ngCordova'])
 
   var link = "http://mercalinks.altervista.org/select1.php";
   $scope.shownGroup = null;
-  //filtro gli annunci tenendomi quelli dell'utente
+
   $http.get(link, {
     params: {
       tabella: "categorie"
