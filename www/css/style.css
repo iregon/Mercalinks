@@ -183,6 +183,9 @@ ion-item:first-child{
   margin-top:60%;
   margin-left: 14%;
   margin-bottom: 5%;
+  /*position: absolute;
+  z-index: 100;
+  bottom: 0;*/
 }
 
 /*stile categorie*/
