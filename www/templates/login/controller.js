@@ -6,6 +6,18 @@ angular.module('starter')
     // $scope.modal.hide();
   };
 
+  function showPopup(text) {
+    var alertPopUp = $ionicPopup.show({
+      title: text,
+      buttons: [{
+        text: "OK",
+        type: "button-default"
+      }]
+    }).then(function(res) {
+
+    });
+  }
+
   // Perform the login action when the user submits the login form
   $scope.doLogin = function() {
 
@@ -31,6 +43,9 @@ angular.module('starter')
         $localStorage.last_login = date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
         console.log($localStorage.last_login);
         window.location.href = "#/app/annunciUtente";
+      }
+      else {
+        showPopup("E-mail e/o password errati");
       }
     }).catch(function(error) {
       console.log(error);
