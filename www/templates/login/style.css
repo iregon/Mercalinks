@@ -1,11 +1,8 @@
 .login_input {
   font-size: 1em !important;
   padding: 20px !important;
-  /*margin:15% !important;*/
   margin-top:10% !important;
-/*  margin-bottom: 5% !important;*/
   border: 1px solid lightgrey !important;
-
   margin-left: 10%;
   width: 80%;
 }
@@ -21,10 +18,16 @@
   font-size: 1.1em;
 }
 
-
-
 .entra{
   margin-top: 10%;
   margin-left: 25%;
   width: 50%;
+}
+
+.itemLog{
+  border:0px;
+}
+
+.divLog{
+  padding-top:30%;
 }
