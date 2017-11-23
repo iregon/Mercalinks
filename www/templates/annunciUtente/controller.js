@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('AnnunciUtenteCtrl', function($scope, $state, $http, $timeout, $localStorage, $stateParams) {
+.controller('AnnunciUtenteCtrl', function($scope, $state, $http, $timeout, $localStorage, $stateParams, $ionicPopup) {
 
   var link = "http://mercalinks.altervista.org/select1.php";
   var idU=$localStorage.id_utente["utente"]["id_utente"];
@@ -60,6 +60,29 @@ angular.module('starter')
     console.log("W la figa");
   }
 
+  $scope.showConfirm = function() {
+     var confirmPopup = $ionicPopup.confirm({
+       title: 'Elimina',
+       template: 'Vuoi davvero eliminare questo annuncio?',
+
+       buttons: [{ // Array[Object] (optional). Buttons to place in the popup footer.
+        text: 'Annulla',
+        type: 'button-default',
+      }, {
+        text: 'OK',
+        type: 'button-positive',
+        onTap: function(e) {
+          // Returning a value will cause the promise to resolve with the given value.
+        }
+      }]
+     });
+
+     confirmPopup.then(function(res) {
+       if(res) {
+
+       }
+     });
+   };
 })
 
 // .directive('onLongPress', function($timeout){

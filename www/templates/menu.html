@@ -28,16 +28,44 @@
           Home
         </ion-item>
 
-        <div ng-click="toggleGroup(group)">
-          <ion-item>
-            <ion-item id="catg" class="item-icon-right">Categorie
-              <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
-            </ion-item>
-            <ion-item class="sub-items" ng-repeat="item in categorie" menu-close ng-show="isGroupShown(group)" href="#/app/categoria/{{item.id_categoria}}">
-              {{item.nome}}
-            </ion-item>
-        </ion-item>
-      </div>
+        <select class="">
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Categorie
+          </option>
+          <option class="sub-items" ng-repeat="item in categorie" href="#/app/categoria/{{item.id_categoria}}">
+            {{item.nome}}
+          </option>
+        </select>
+
+        <br>
+        <select class="">
+          <option class="sub-items" disabled selected>
+            Prezzo
+          </option>
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Crescente
+          </option>
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Decrescente
+          </option>
+        </select>
+
+        <br>
+        <select class="">
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Luogo
+          </option>
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Regione
+          </option>
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Provincia
+          </option>
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Comune
+          </option>
+        </select>
+        
         <ion-item menu-close href="#/app/preferiti" ng-show="is_user_logged()">
           Preferiti
         </ion-item>
