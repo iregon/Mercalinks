@@ -6,6 +6,7 @@
   margin-left: 5px;
   margin-right: 5px;
   color: #0099cc;
+  padding-left: 2%;
 }
 .annuncio_prezzo{
   text-align: right;
@@ -20,6 +21,12 @@
   margin-right: 10px;
   color: grey;
 }
+
+.annuncio_data_in{
+  font-size: 1em;
+  text-align: left;
+  padding-left: 2%;
+}
 .annuncio_utente{
   font-size: 1.3em;
   font-weight: bold;
@@ -32,12 +39,13 @@
   color: #000000;
 }
 .annuncio_contatta{
-  border: 9px solid #890000;
+  border: 8px solid #890000;
   color: #FFFFFF;
   background-color: #890000;
-  font-size: 2em;
+  font-size: 1.8em;
   border-radius: 20px;
   margin-bottom: 20px;
+  margin-top: 5%;
 }
 
 .annuncio_immagine {
@@ -63,6 +71,7 @@
   /*position: center;*/
   height: 80px;
   border-color: none;
+  font-size: 1.4em;
 }
 
 .contattaCancel{
@@ -84,6 +93,10 @@
 
 .marginBottom{
   margin-bottom: 14px;
+}
+
+.paddingBottomMail{
+  padding-bottom: 0px;
 }
 
 /*.marginBottom2{

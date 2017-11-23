@@ -1,25 +1,34 @@
 <ion-view view-title="Annuncio">
   <ion-content>
+
     <div class="annuncio_image_container">
       <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" alt="" class="annuncio_immagine">
     </div>
 
-    <p class="annuncio_titolo">
+    <!-- <p class="annuncio_titolo">
       {{annuncio.titolo}}
     </p>
     <p class="annuncio_prezzo">
       €{{annuncio.prezzo}}
     </p>
-    <!-- <table>
+    {{annuncio.data_in}} -->
+
+    <table>
       <tr>
         <th class="annuncio_titolo">
           {{annuncio.titolo}}
+        </th>
+      </tr>
+      <tr>
+        <th class="annuncio_data_in">
+          <i class="ion-android-calendar"> {{annuncio.data_in}}
         </th>
         <th class="annuncio_prezzo">
           €{{annuncio.prezzo}}
         </th>
       </tr>
-    </table> -->
+    </table>
+
     <!--linea grigia per Rocca-->
     <hr>
 
@@ -33,7 +42,7 @@
       </p>
     </div>
     <div>
-    <center class="marginBottom"><button ng-click="contatta()" class="annuncio_contatta">Contatta</button></center>
-  </div>
+      <center class="marginBottom"><button ng-click="contatta()" class="annuncio_contatta"><p class="ion-android-person"> Contatta</button></center>
+    </div>
   </ion-content>
 </ion-view>

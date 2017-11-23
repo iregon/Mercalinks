@@ -36,11 +36,17 @@
           <input type="number" name="id_posizione" placeholder="id_posizione">
         </label>
         <label class="item item-input">
-          <input type="number" name="id_comune" placeholder="id_comune">
+          <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune"><br>
+          <select name="id_comune" ng-model="id_comune"> <!--Supplement an id here instead of using 'name'-->
+              <option ng-repeat="comune in comuni" value="{{comune.id_comune}}">
+                {{comune.nome}}
+              </option>
+          </select>
+
         </label>
         <label class="item item-input">
 
-          <button  class="button button-block button-positive" type="submit">Inserisci</button>
+          <button  class="button button-block button-positive" ng-click="messaggio()">Inserisci</button>
         </label>
       </div>
     </form>

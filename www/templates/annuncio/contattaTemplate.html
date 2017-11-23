@@ -3,22 +3,22 @@
      <h1 class="title">{{title}}</h1>
   </ion-header-bar>
   <ion-content>
-  <!-- <ion-item ng-href=tel:{{utente.num_tel}} class="contattaButton marginTop">
-    <img src="/templates/annuncio/phone.PNG">
-    {{utente.num_tel}}
-  </ion-item>
-  <ion-item ng-click="mailUser(utente,annuncio)" class="contattaButton" >
-    <img src="/templates/annuncio/mail.PNG">
-    {{utente.email}}
-  </ion-item> -->
-  <div class="">
-    <div class="" ng-href=tel:{{utente.num_tel}}>
-      <h4>{{utente.num_tel}}</h4>
+    <div ng-href=tel:{{utente.num_tel}} class="contattaButton marginTop">
+      <img src="/templates/annuncio/phone.PNG">
+      {{utente.num_tel}}
     </div>
-    <div class="" ng-click="mailUser(utente)">
-      <h4>{{utente.email}}</h4>
+    <div ng-click="mailUser(utente,annuncio)" class="contattaButton paddingButtomMail" >
+      <img src="/templates/annuncio/mail.PNG">
+      {{utente.email}}
     </div>
-  </div>
+    <!-- <div class="">
+      <div class="" ng-href=tel:{{utente.num_tel}}>
+        <h4>{{utente.num_tel}}</h4>
+      </div>
+      <div class="" ng-click="mailUser(utente)">
+        <h4>{{utente.email}}</h4>
+      </div>
+    </div> -->
   </ion-content>
   <ion-footer-bar class="footerColor">
     <input  type="button"  value="{{buttons[0].text}}" ng-click="close()" class="contattaCancel">
