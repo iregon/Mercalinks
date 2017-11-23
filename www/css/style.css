@@ -171,6 +171,7 @@ ion-item:first-child{
 
 /*colore bianco 3 linee menù*/
 .bar-stable .button.button-clear {
+    color: #fff;
 }
 
 /*scritta "home"*/
@@ -181,6 +182,7 @@ ion-item:first-child{
   font-size: 19px;
 }
 .platform-android .bar .title {
+    line-height: 60px;
 }
 
 /*customizzazione menu*/
