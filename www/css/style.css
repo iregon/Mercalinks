@@ -268,3 +268,7 @@ ion-item:first-child{
 .list {
   height: 70%;
 }
+
+.menu {
+  min-height: 0;
+}

@@ -6,15 +6,14 @@
   display: none;
 }
 
-<<<<<<< HEAD
 .qualcosa{
   padding-left:2%;
-=======
+}
+
 .icon {
   font-size: 20px;
 }
 
 #lista_comuni {
   width: 50%;
->>>>>>> 790ab18e5c351ad95f0875f43c8dba4212d0965b
 }
