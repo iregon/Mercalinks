@@ -36,7 +36,7 @@
         <label class="item item-input">
           <i class="icon ion-home"></i>
           <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune" placeholder="Comune"><br>
-          <select name="id_comune" ng-model="id_comune" id="lista_comuni" class="hidden_input"> <!--Supplement an id here instead of using 'name'-->
+          <select name="id_comune" ng-model="id_comune" id="lista_comuni">
               <option ng-repeat="comune in comuni" value="{{comune.id_comune}}">
                 {{comune.nome}}
               </option>

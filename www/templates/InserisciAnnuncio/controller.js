@@ -9,7 +9,7 @@
      }
    }).then(function(response) {
      $scope.categorie = response.data.categorie;
-     console.log($scope.categorie);
+    //  console.log($scope.categorie);
    }).catch(function(error) {
      console.log(error);
    });
@@ -25,14 +25,14 @@
          }
        }).then(function(response) {
          $scope.comuni = response.data.comuni;
-         lista_comuni.style.visibility = "visible";
-         console.log($scope.comuni);
+         lista_comuni.style.display = "block";
+        //  console.log($scope.comuni);
        }).catch(function(error) {
          console.log(error);
        });
      }
      else {
-       lista_comuni.style.visibility = "hidden";
+       lista_comuni.style.display = "none";
      }
    }
 

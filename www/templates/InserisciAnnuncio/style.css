@@ -1,4 +1,4 @@
-.hidden_input {
+.hidden_input, #lista_comuni{
   display: none;
 }
 
@@ -8,4 +8,8 @@
 
 .icon {
   font-size: 20px;
+}
+
+#lista_comuni {
+  width: 50%;
 }
