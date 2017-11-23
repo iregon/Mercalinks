@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('LoginCtrl', function($scope, $http, $timeout, $localStorage) {
+.controller('LoginCtrl', function($scope, $http, $timeout, $localStorage, $ionicPopup) {
 
   $scope.closeLogin = function() {
     // $scope.modal.hide();
@@ -8,7 +8,8 @@ angular.module('starter')
 
   function showPopup(text) {
     var alertPopUp = $ionicPopup.show({
-      title: text,
+      title:"<img src='/img/error.png'>",
+      subTitle: "<h4>" + text + "</h4>",
       buttons: [{
         text: "OK",
         type: "button-default"
@@ -50,7 +51,5 @@ angular.module('starter')
     }).catch(function(error) {
       console.log(error);
     });
-
-    $scope.closeLogin();
   };
 });
