@@ -1,6 +1,6 @@
  <ion-view view-title="Nuovo annuncio">
   <ion-content class="annunci">
-    <form name="insert" ng-submit="inserisci()"  enctype="multipart/form-data">
+    <form name="insert" action="http://mercalinks.altervista.org/add_product.php" target="hidden_iframe" enctype="multipart/form-data">
       <div class="list">
         <label class="item item-input">
           <i class="icon ion-ios-pricetags"  ></i>
@@ -44,5 +44,7 @@
         </label>
       </div>
     </form>
+
+    <iframe name="hidden_iframe" class="hidden_iframe"></iframe>
   </ion-content>
 </ion-view>
