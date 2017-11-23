@@ -37,22 +37,5 @@ angular.module('starter')
     });
 
     $scope.closeLogin();
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    // $timeout(function() {
-    //   var link = "http://mercalinks.altervista.org/login.php";
-    //   $http.post(link, {
-    //     params: {
-    //       str: $scope.loginData.email + ";" + $scope.loginData.password
-    //     }
-    //   }).then(function(response) {
-    //     $scope.annunci = response.data;
-    //     console.log($scope.annunci);
-    //   }).catch(function(error) {
-    //     console.log(error);
-    //   });
-    //   // $scope.closeLogin();
-    // }, 3000);
   };
 });
