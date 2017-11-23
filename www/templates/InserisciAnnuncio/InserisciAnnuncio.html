@@ -37,7 +37,7 @@
         </label>
         <label class="item item-input">
           <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune"><br>
-          <select name="id_comune" ng-model="id_comune"> <!--Supplement an id here instead of using 'name'-->
+          <select name="id_comune" ng-model="id_comune" id="lista_comuni"> <!--Supplement an id here instead of using 'name'-->
               <option ng-repeat="comune in comuni" value="{{comune.id_comune}}">
                 {{comune.nome}}
               </option>

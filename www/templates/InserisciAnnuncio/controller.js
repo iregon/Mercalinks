@@ -17,7 +17,7 @@
    $scope.loadComuni=function(){
      var link = "http://mercalinks.altervista.org/find_comuni_by_name.php";
      var nome_comune = document.getElementById("comune").value;
-
+     var lista_comuni = document.getElementById("lista_comuni");
      if (nome_comune.length >= 3) {
        $http.get(link, {
          params: {
@@ -25,13 +25,14 @@
          }
        }).then(function(response) {
          $scope.comuni = response.data.comuni;
+         lista_comuni.style.visibility = "visible";
          console.log($scope.comuni);
        }).catch(function(error) {
          console.log(error);
        });
      }
      else {
-       
+       lista_comuni.style.visibility = "hidden";
      }
    }
 
