@@ -2,10 +2,14 @@ angular.module('starter')
 
 .controller('HomeCtrl', function($scope, $http){
  // $scope.chiamataHttp(function(){
-   var link = "http://mercalinks.altervista.org/select1.php";
+ var page = 1;
+
+ $scope.loadAnnunci = function() {
+   var link = "http://mercalinks.altervista.org/select3.php";
    $http.get(link, {
      params: {
-       tabella: "annunci"
+       tabella: "annunci",
+       page: page
      }
    }).then(function(response) {
      $scope.annunci = response.data.annunci;
@@ -13,7 +17,7 @@ angular.module('starter')
    }).catch(function(error) {
      console.log(error);
    });
- // })
+ }
 
     $scope.doRefresh= function(){
       $http.get(link, {
@@ -31,4 +35,8 @@ angular.module('starter')
      });
     }
 
+    $scope.loadMore = function() {
+      page++;
+      $scope.loadAnnunci();
+    }
 });

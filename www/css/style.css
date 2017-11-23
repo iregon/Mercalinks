@@ -156,6 +156,7 @@ ion-item:first-child{
   height: 70px;
   border-radius: 49%;
   border: 1px solid #0099cc;
+  object-fit: cover;
 }
 
 .item-content {
