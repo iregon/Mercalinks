@@ -3,25 +3,30 @@
     <form name="insert" action="http://mercalinks.altervista.org/add_product.php" method="post" target="hidden_iframe" enctype="multipart/form-data">
       <div class="list">
         <label class="item item-input">
-          <i class="icon ion-ios-pricetags"  ></i>
+          <i class="icon ion-ios-pricetags qualcosa"></i>
           <input type="text" name="titolo" ngMaxlength="40" placeholder="Titolo" style="padding-left:2%">
         </label>
-        <label class="item item-input">
+        <label class="item item-input qualcosa">
           <i class="icon ion-android-create"></i>
-          <input type="text" name="descrizione" ngMaxlength="300" placeholder="Descrizione" style="padding-left:2%">
+          <input type="textarea" name="descrizione" ngMaxlength="300" placeholder="Descrizione" style="padding-left:2%">
         </label>
 
-        <label class="item item-input">
+        <label class="item item-input qualcosa">
           <i class="icon ion-social-euro"></i>
           <input type="number" step="0.01" name="prezzo" placeholder="Prezzo" style="padding-left:2%">
         </label>
+<<<<<<< HEAD
+        <label class="item item-input qualcosa">
+=======
+>>>>>>> 790ab18e5c351ad95f0875f43c8dba4212d0965b
 
         <label class="item item-input">
           <input type="file" name="immagine">
         </label>
 
 
-        <label class="item item-input">
+        <label class="item item-input qualcosa">
+          Categoria:
           <select name="id_categoria" ng-model="id_categoria"> <!--Supplement an id here instead of using 'name'-->
               <option ng-repeat="categoria in categorie" value="{{categoria.id_categoria}}">
                 {{categoria.nome}}
@@ -34,9 +39,14 @@
         </label>
 
         <label class="item item-input">
+<<<<<<< HEAD
+          <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune"><br>
+          <select name="id_comune" ng-model="id_comune"> <!--Supplement an id here instead of using 'name'-->
+=======
           <i class="icon ion-home"></i>
           <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune" placeholder="Comune"><br>
           <select name="id_comune" ng-model="id_comune" id="lista_comuni">
+>>>>>>> 790ab18e5c351ad95f0875f43c8dba4212d0965b
               <option ng-repeat="comune in comuni" value="{{comune.id_comune}}">
                 {{comune.nome}}
               </option>
