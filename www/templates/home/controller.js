@@ -14,6 +14,7 @@ angular.module('starter')
    }).then(function(response) {
      $scope.annunci = response.data.annunci;
      //console.log($scope.annunci);
+     $scope.$broadcast('scroll.infiniteScrollComplete');
    }).catch(function(error) {
      console.log(error);
    });
@@ -38,5 +39,7 @@ angular.module('starter')
     $scope.loadMore = function() {
       page++;
       $scope.loadAnnunci();
+      //console.log("infinite scroll");
+      //$scope.$broadcast('scroll.infiniteScrollComplete');
     }
 });
