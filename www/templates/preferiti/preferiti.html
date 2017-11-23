@@ -1,0 +1,26 @@
+<ion-view view-title="Preferiti">
+  <ion-content>
+    <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+
+    <ion-list class="annunci">
+      <ion-item class="ann" ng-repeat="annuncio in annunci" href="#/app/annuncio/{{annuncio.id_annuncio}}">
+        <table class="home_width_fit">
+          <tr class="ann">
+            <td class="imgAnn" rowspan="2">
+                <img src="http://mercalinks.altervista.org/img_annunci/{{annuncio.immagine}}" height="60" width="60" onerror=this.src="img/None.png" >
+            </td>
+            <td class="ann">
+              <h2 class="blueDetail home_left_5px">{{annuncio.titolo}}</h2>
+              <p>{{annuncio.descrizione}}</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="redDetail item">€ {{annuncio.prezzo}}</span>
+            </td>
+          </tr>
+        </table>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
