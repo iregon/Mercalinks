@@ -99,7 +99,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngStorage','ngCordov
           controller: 'AnnuncioCtrl'
         }
       }
-    });
+    })
+
+    .state('app.edit', {
+      url: '/edit',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/edit/edit.html',
+          controller: 'EditCtrl'
+        }
+      }
+    })
+
+    ;
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');

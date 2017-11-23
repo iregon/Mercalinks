@@ -17,8 +17,8 @@
       <h1 class="title">Mercalinks</h1>
     </ion-header-bar> -->
     <ion-content>
-      <div class="menu_user_header" ng-show="is_user_logged()">
-        <div>
+      <div class="menu_user_header" >
+        <div ng-show="is_user_logged()">
           <h3>{{user_data.utente.nome}} {{user_data.utente.cognome}}</h3>
           <p>{{user_data.utente.email}}</p>
         </div>
@@ -44,7 +44,7 @@
         <ion-item menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
           Annunci Utente
         </ion-item>
-        <button id="login" style="margin-top:149%" class="log" style="" menu-close onClick="window.location.href='#/app/login'" ng-hide="is_user_logged()">
+        <button id="login" style="margin-top:80%" class="log" style="" menu-close onClick="window.location.href='#/app/login'" ng-hide="is_user_logged()">
           Login
         </button>
         <button id="logout" class="log" menu-close ng-click="logout()" ng-show="is_user_logged()">

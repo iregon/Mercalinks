@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('AnnunciUtenteCtrl', function($scope, $http, $timeout, $localStorage, $stateParams) {
+.controller('AnnunciUtenteCtrl', function($scope, $state, $http, $timeout, $localStorage, $stateParams) {
 
   var link = "http://mercalinks.altervista.org/select1.php";
   var idU=$localStorage.id_utente["utente"]["id_utente"];
@@ -23,6 +23,9 @@ angular.module('starter')
     console.log(error);
   });
 
+  $scope.gotoEdit = function(){
+    $state.go('app.edit');
+  }
 
   $scope.doRefresh= function(){
     $scope.annunciU = [];
@@ -45,14 +48,17 @@ angular.module('starter')
    });
   }
 
-  $scope.toDoOnLongPress = function(){
-    console.log("PorcoDio");
-  }
+  // $scope.toDoOnLongPress = function(){
+  //   console.log("PorcoDio");
+  // }
+  //
+  // $scope.toDoOnTouchEnd = function(){
+  //   console.log("PorcaMadonna")
+  // }
 
-  $scope.toDoOnTouchEnd = function(){
-    console.log("PorcaMadonna")
+  $scope.deleteItem = function(){
+    console.log("W la figa");
   }
-
 
 })
 

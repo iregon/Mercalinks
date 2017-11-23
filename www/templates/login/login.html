@@ -2,16 +2,16 @@
   <ion-content class="annunci">
     <form ng-submit="doLogin()">
       <div class="list">
-        <label class="item item-input">
+        <label class="item">
           <!-- <span class="input-label">E-mail</span> -->
-          <input type="text" ng-model="loginData.email" placeholder="E-mail" class="login_input">
-        </label>
-        <label class="item item-input">
-          <!-- <span class="input-label">Password</span> -->
-          <input type="password" ng-model="loginData.password" placeholder="Password" class="login_input">
+          <input type="text" size="25" ng-model="loginData.email" placeholder="E-mail" class="login_input">
         </label>
         <label class="item">
-          <button class="button button-block button-positive" type="submit">Entra</button>
+          <!-- <span class="input-label">Password</span> -->
+          <input type="password" size="25" ng-model="loginData.password" placeholder="Password" class="login_input">
+        </label>
+        <label class="item">
+          <button class="button button-positive entra" type="submit">Entra</button>
         </label>
       </div>
     </form>

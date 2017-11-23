@@ -104,7 +104,7 @@ ion-item:first-child{
 
 .ann p{
   padding-left:10px !important;
-  width: inherit;
+  width: 16em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
