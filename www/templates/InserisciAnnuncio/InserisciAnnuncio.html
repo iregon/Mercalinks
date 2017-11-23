@@ -15,8 +15,8 @@
           <i class="icon ion-social-euro"></i>
           <input type="number" step="0.01" name="prezzo" placeholder="Prezzo" style="padding-left:2%">
         </label>
-        <label class="item item-input">
 
+        <label class="item item-input">
           <input type="file" name="immagine">
         </label>
 
@@ -32,12 +32,11 @@
         <label class="item item-input hidden_input">
           <input type="number" name="id_utente" placeholder="id_utente" value="{{getUserId()}}">
         </label>
-        <!-- <label class="item item-input">
-          <input type="number" name="id_posizione" placeholder="id_posizione">
-        </label> -->
+
         <label class="item item-input">
-          <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune"><br>
-          <select name="id_comune" ng-model="id_comune" id="lista_comuni"> <!--Supplement an id here instead of using 'name'-->
+          <i class="icon ion-home"></i>
+          <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune" placeholder="Comune"><br>
+          <select name="id_comune" ng-model="id_comune" id="lista_comuni" class="hidden_input"> <!--Supplement an id here instead of using 'name'-->
               <option ng-repeat="comune in comuni" value="{{comune.id_comune}}">
                 {{comune.nome}}
               </option>

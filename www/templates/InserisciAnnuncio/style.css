@@ -5,3 +5,7 @@
 .hidden_iframe {
   display: none;
 }
+
+.icon {
+  font-size: 20px;
+}
