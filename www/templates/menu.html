@@ -65,7 +65,7 @@
             Comune
           </option>
         </select>
-        
+
         <ion-item menu-close href="#/app/preferiti" ng-show="is_user_logged()">
           Preferiti
         </ion-item>
@@ -77,12 +77,14 @@
           Annunci Utente
         </ion-item>
 
-        <button id="login" ng-hide="is_user_logged()" style="margin-top:100%" class="log" style="" menu-close onClick="window.location.href='#/app/login'">
-          Login
-        </button>
-        <button id="logout" ng-show="is_user_logged()" class="log" menu-close ng-click="logout()">
-          Logout
-        </button>
+        <div class="log_buttons">
+          <button id="login" ng-hide="is_user_logged()" style="margin-top:100%" class="log" style="" menu-close onClick="window.location.href='#/app/login'">
+            Login
+          </button>
+          <button id="logout" ng-show="is_user_logged()" class="log" menu-close ng-click="logout()">
+            Logout
+          </button>
+        </div>
 
         </div>
       </ion-list>
