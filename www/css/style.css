@@ -123,12 +123,13 @@ ion-item:first-child{
   width: 70px;
   height: 70px;
   border-radius: 49%;
+  border: 1px solid #0099cc;
 }
 
 .item-content {
   padding: 16px !important;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
+  /*padding-top: 2px !important;
+  padding-bottom: 2px !important;*/
 }
 
 /*colore bianco 3 linee menù*/
@@ -183,9 +184,11 @@ ion-item:first-child{
   background-color: white;
   border-style:solid;
   border-color: lightgrey !important;
-  margin-top:80%;
   margin-left: 14%;
   margin-bottom: 5%;
+  position:absolute;
+  top:100%;
+  /*bottom:5%;*/
 }
 
 /*stile categorie*/
