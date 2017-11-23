@@ -17,15 +17,19 @@ angular.module('starter')
    }).then(function(response) {
      $scope.annunci = response.data.annunci;
      fine = response.data.fine;
-     //console.log($scope.annunci);
      if (action === "refresh") $scope.$broadcast('scroll.refreshComplete');
-     else if (action === "scroll") $scope.$broadcast('scroll.infiniteScrollComplete');
+     if (action === "scroll") $scope.$broadcast('scroll.infiniteScrollComplete');
    }).catch(function(error) {
      console.log(error);
    });
  }
 
- $scope.doRefresh= function(){
+ $scope.moreData = function() {
+   if (fine == 0) return true;
+   else return false;
+ }
+
+ $scope.doRefresh = function(){
    page = 1;
    fine = 0;
    action = "refresh";
