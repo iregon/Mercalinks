@@ -43,7 +43,8 @@
      console.log(insert.id_categoria.value);
      if(insert.titolo.value===""){
        var alertPopup=$ionicPopup.show({
-         title:'Inserisci il titolo',
+         title:'',
+         template:'Inserisci il titolo',
          buttons:[{
            text:'OK',
            type: 'button-default'
