@@ -31,38 +31,51 @@
           Home
         </ion-item>
 
-        <div ng-click="toggleGroup(group)">
-          <ion-item>
-            <ion-item id="catg" class="item-icon-right">Categorie
-              <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
-            </ion-item>
-            <ion-item class="sub-items" ng-repeat="item in categorie" menu-close ng-show="isGroupShown(group)" href="#/app/categoria/{{item.id_categoria}}">
-              {{item.nome}}
-            </ion-item>
-        </ion-item>
-      </div>
+        <select class="filtro">
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Categorie
+          </option>
+          <option class="sub-items" ng-repeat="item in categorie" href="#/app/categoria/{{item.id_categoria}}">
+            {{item.nome}}
+          </option>
+        </select>
+
+        <select class="filtro">
+          <option class="sub-items" disabled selected>
+            Prezzo
+          </option>
+          <option class="sub-items" href="#/app/categoria/{{}}">
+            Crescente
+          </option>
+          <option class="sub-items">
+            Decrescente
+          </option>
+        </select>
+
+        <select class="filtro">
+          <option class="sub-items">
+            Luogo
+          </option>
+          <option class="sub-items">
+            Regione
+          </option>
+          <option class="sub-items">
+            Provincia
+          </option>
+          <option class="sub-items">
+            Comune
+          </option>
+        </select>
 
         <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
           Preferiti
         </ion-item>
-        
+
         <ion-item menu-close class="menu" href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
           Inserisci Annuncio
         </ion-item>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
-=======
-<<<<<<< HEAD
-=======
->>>>>>> daf426282786d566a1847241117363e5142f87d2
 
         <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
-<<<<<<< HEAD
->>>>>>> 7c740498daf9c6d06fe0d98ce2c20590d595ee69
->>>>>>> 5a891a6c6a66b76f62d4ee9de7d03fb5343fbf0c
-=======
->>>>>>> daf426282786d566a1847241117363e5142f87d2
           Annunci Utente
         </ion-item>
 

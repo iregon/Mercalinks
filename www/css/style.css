@@ -231,6 +231,16 @@ ion-item:first-child{
   margin-bottom: 5%;*/
 }
 
+.filtro{
+  margin-left: 0px;
+  padding: 16px 49px 16px 16px;
+  border:0px;
+  width: 90%;
+  font-family: -apple-system, "Helvetica Neue", Roboto, "Segoe UI", sans-serif;
+  font-size: 16px;
+  color: rgb(68, 68, 68);
+}
+
 /*stile categorie*/
 .item-icon-right{
   margin:16px !important;
@@ -263,6 +273,7 @@ ion-item:first-child{
   bottom: 0;
   text-align: center;
   padding-bottom: 5%;
+  z-index: -1;
 }
 
 .list {
