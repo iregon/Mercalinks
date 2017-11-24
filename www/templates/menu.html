@@ -27,48 +27,44 @@
         </div>
       </div>
       <ion-list>
+
         <ion-item class="menu" menu-close href="#/app/home/home">
+          <i class="icon ion-home"></i>
           Home
         </ion-item>
 
-        <select class="filtro">
-          <option class="sub-items" href="#/app/home/">
+        <select class="filtro" ng-model="cat">
+          <option class="sub-items" value="">
             Categorie
           </option>
-          <option class="sub-items" ng-repeat="item in categorie" href="#/app/home/categoria:{{item.id_categoria}}">
+          <option class="sub-items" ng-repeat="item in categorie" menu-close value="{{item.id_categoria}}">
             {{item.nome}}
           </option>
         </select>
 
-        <select class="filtro">
-          <option class="sub-items" disabled selected>
+        <select class="filtro" ng-model="prezzo">
+          <option class="sub-items" value="">
             Prezzo
           </option>
-          <option class="sub-items" href="#/app/home/prezzo:{{this.text}}">
+          <option class="sub-items" menu-close value="1">
             Crescente
           </option>
-          <option class="sub-items" href="#/app/home/prezzo:{{this.text}}">
+          <option class="sub-items" menu-close value="2">
             Decrescente
           </option>
         </select>
 
-        <select class="filtro">
-          <option class="sub-items" href="#/app/home/">
-            Provincia
-          </option>
-          <option class="sub-items" ng-repeat="item in province">
-            {{item.nome}}
-          </option>
-        </select>
-
         <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
+            <i class="icon ion-star"></i>
           Preferiti
         </ion-item>
 
         <ion-item menu-close class="menu" href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
+            <i class="icon ion-plus-round"></i>
           Inserisci Annuncio
         </ion-item>
         <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
+            <i class="icon ion-ios-body"></i>
           Annunci Utente
         </ion-item>
 
