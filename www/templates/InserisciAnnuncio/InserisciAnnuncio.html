@@ -1,22 +1,29 @@
  <ion-view view-title="Nuovo annuncio">
   <ion-content class="annunci">
-    <form name="insert" action="http://mercalinks.altervista.org/add_product.php" method="post" target="hidden_iframe" enctype="multipart/form-data">
+
+    <form name="insert" class="inserimento" action="http://mercalinks.altervista.org/add_product.php" method="post" target="hidden_iframe" enctype="multipart/form-data">
       <div class="list">
-        <label class="item item-input">
-          <i class="icon ion-ios-pricetags qualcosa"></i>
-          <input type="text" name="titolo" ngMaxlength="40" placeholder="Titolo" style="padding-left:2%">
-        </label>
         <label class="item item-input qualcosa">
-          <i class="icon ion-android-create"></i>
-          <input type="textarea" name="descrizione" ngMaxlength="300" placeholder="Descrizione" style="padding-left:2%">
+          <div class="image"><i class="icon ion-ios-pricetags qualcosa"></i></div>
+          <input type="text" name="titolo" ngMaxlength="40" placeholder="Titolo">
+        </label>
+
+        <label class="item item-input euro">
+          <div class="image"><i class="icon ion-social-euro"></i></div>
+          <input type="number" step="0.01" name="prezzo" placeholder="Prezzo">
         </label>
 
         <label class="item item-input qualcosa">
-          <i class="icon ion-social-euro"></i>
-          <input type="number" step="0.01" name="prezzo" placeholder="Prezzo" style="padding-left:2%">
+          <div class="image"><i class="icon ion-android-create"></i></div>
+          <input type="textarea" name="descrizione" ngMaxlength="300" placeholder="Descrizione">
         </label>
-        <label class="item item-input qualcosa">
-          <input type="file" name="immagine">
+
+        <label for="immagine" class="item item-input qualcosa">
+          <div class="image"><i class="icon ion-image"></i></div>
+          <label>
+            <!-- <input type="text" placeholder="Immagine" readonly="true" class="qualcosa prova"> -->
+            <input type="file" name="immagine" id="immagine" placeholder="Immagine" class="inputfile">
+          </label>
         </label>
 
 
@@ -33,7 +40,7 @@
           <input type="number" name="id_utente" placeholder="id_utente" value="{{getUserId()}}">
         </label>
 
-        <label class="item item-input">
+        <label class="item item-input qualcosa">
           <i class="icon ion-home"></i>
           <input type="text" ng-change="loadComuni()" ng-model="comune" id="comune" placeholder="Comune"><br>
           <select name="id_comune" ng-model="id_comune" id="lista_comuni">
@@ -48,6 +55,7 @@
         </label>
       </div>
     </form>
+
 
     <iframe name="hidden_iframe" class="hidden_iframe"></iframe>
   </ion-content>
