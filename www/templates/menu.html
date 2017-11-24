@@ -27,12 +27,15 @@
         </div>
       </div>
       <ion-list>
+
         <ion-item class="menu" menu-close href="#/app/home/home">
+          <i class="icon ion-home"></i>
           Home
         </ion-item>
 
         <select class="filtro">
           <option class="sub-items" href="#/app/home/">
+            <i class="icon ion-clipboard"></i>
             Categorie
           </option>
           <option class="sub-items" ng-repeat="item in categorie" href="#/app/home/categoria:{{item.id_categoria}}">
@@ -42,6 +45,7 @@
 
         <select class="filtro">
           <option class="sub-items" disabled selected>
+            <i class="icon ion-social-euro"></i>
             Prezzo
           </option>
           <option class="sub-items" href="#/app/home/prezzo:{{this.text}}">
@@ -51,9 +55,10 @@
             Decrescente
           </option>
         </select>
-
+        
         <select class="filtro">
           <option class="sub-items" href="#/app/home/">
+
             Provincia
           </option>
           <option class="sub-items" ng-repeat="item in province">
@@ -62,13 +67,16 @@
         </select>
 
         <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
+            <i class="icon ion-star"></i>
           Preferiti
         </ion-item>
 
         <ion-item menu-close class="menu" href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
+            <i class="icon ion-plus-round"></i>
           Inserisci Annuncio
         </ion-item>
         <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
+            <i class="icon ion-ios-body"></i>
           Annunci Utente
         </ion-item>
 
