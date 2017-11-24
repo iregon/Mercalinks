@@ -71,14 +71,14 @@ angular.module('starter.controllers', ['ngCordova'])
     console.log(error);
   });
 
-<<<<<<< HEAD
   var link = "http://mercalinks.altervista.org/getAllProvince.php";
   $http.get(link, {
   }).then(function(response) {
     $scope.province=response.data.province;
   }).catch(function(error) {
     console.log(error);
-=======
+  });
+
   Array.prototype.indexOf || (Array.prototype.indexOf = function(d, e) {
     var a;
     if (null == this) throw new TypeError('"this" is null or not defined');
@@ -93,6 +93,5 @@ angular.module('starter.controllers', ['ngCordova'])
         a++
     }
     return -1
->>>>>>> 2f4142c0f47aa85bf4e265d45d8964882a93e1af
   });
 })
