@@ -73,6 +73,12 @@
   height: 80px;
   border-color: none;
   font-size: 1.4em;
+  color: black;
+}
+
+.call{
+  color: black;
+  text-decoration-line: none; 
 }
 
 .contattaCancel{
