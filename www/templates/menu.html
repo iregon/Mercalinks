@@ -31,16 +31,41 @@
           Home
         </ion-item>
 
-        <div ng-click="toggleGroup(group)">
-          <ion-item>
-            <ion-item id="catg" class="item-icon-right">Categorie
-              <i class="icon" ng-class="isGroupShown(group) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
-            </ion-item>
-            <ion-item class="sub-items" ng-repeat="item in categorie" menu-close ng-show="isGroupShown(group)" href="#/app/categoria/{{item.id_categoria}}">
-              {{item.nome}}
-            </ion-item>
-        </ion-item>
-      </div>
+        <select class="filtro">
+          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+            Categorie
+          </option>
+          <option class="sub-items" ng-repeat="item in categorie" href="#/app/categoria/{{item.id_categoria}}">
+            {{item.nome}}
+          </option>
+        </select>
+
+        <select class="filtro">
+          <option class="sub-items" disabled selected>
+            Prezzo
+          </option>
+          <option class="sub-items" href="#/app/categoria/{{}}">
+            Crescente
+          </option>
+          <option class="sub-items">
+            Decrescente
+          </option>
+        </select>
+
+        <select class="filtro">
+          <option class="sub-items">
+            Luogo
+          </option>
+          <option class="sub-items">
+            Regione
+          </option>
+          <option class="sub-items">
+            Provincia
+          </option>
+          <option class="sub-items">
+            Comune
+          </option>
+        </select>
 
         <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
           Preferiti

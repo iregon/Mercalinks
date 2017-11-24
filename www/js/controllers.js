@@ -72,27 +72,4 @@ angular.module('starter.controllers', ['ngCordova'])
   }).catch(function(error) {
     console.log(error);
   });
-
-
-  $scope.toggleGroup = function(group) {
-    if ($scope.isGroupShown(group)) {
-      $scope.shownGroup = null;
-      document.getElementById('catg').style="margin-bottom:0px";
-      document.getElementById('login').style="margin-top:100%";
-      document.getElementById('logout').style="margin-top:80%";
-    } else {
-      $scope.shownGroup = group;
-      document.getElementById('catg').style="margin-bottom:10px";
-      document.getElementById('login').style="margin-top:29.5%";
-      document.getElementById('logout').style="margin-top:9.5%";
-    }
-    // $ionicScrollDelegate.resize();
-  }
-
-  $scope.isGroupShown = function(group) {
-    return $scope.shownGroup === group;
-  }
-
-
-
 })

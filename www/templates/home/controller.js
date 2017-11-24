@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('HomeCtrl', function($scope, $http){
+.controller('HomeCtrl', function($scope, $http, $stateParams){
  // $scope.chiamataHttp(function(){
  var page = 1;
  var fine = 0;
