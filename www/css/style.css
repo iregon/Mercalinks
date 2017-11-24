@@ -196,12 +196,14 @@ ion-item:first-child{
   height: 30%;
   position: relative;
   margin-top: -1px;
+  /*padding-bottom: 5px;*/
 }
 
 .menu_user_header div {
   position: absolute;
   bottom: 0;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 .menu_user_header h3 {

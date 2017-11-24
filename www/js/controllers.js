@@ -15,7 +15,7 @@ angular.module('starter.controllers', ['ngCordova'])
 
 
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage, $http) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $localStorage, $http, $rootScope) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.

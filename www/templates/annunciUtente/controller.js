@@ -51,16 +51,16 @@ angular.module('starter')
   }
 
   // $scope.toDoOnLongPress = function(){
-  //   console.log("PorcoDio");
+  //   console.log("ok1");
   // }
   //
   // $scope.toDoOnTouchEnd = function(){
-  //   console.log("PorcaMadonna")
+  //   console.log("ok2")
   // }
 
-  $scope.deleteItem = function(){
-    console.log("W la figa");
-  }
+  // $scope.deleteItem = function(){
+  //   console.log("ok3");
+  // }
 
   $scope.showConfirm = function(id) {
      var link = "http://mercalinks.altervista.org/delete1.php";
