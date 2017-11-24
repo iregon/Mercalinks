@@ -33,36 +33,24 @@
           Home
         </ion-item>
 
-        <select class="filtro">
-          <option class="sub-items" href="#/app/home/">
-            <i class="icon ion-clipboard"></i>
+        <select class="filtro" ng-model="cat">
+          <option class="sub-items" value="">
             Categorie
           </option>
-          <option class="sub-items" ng-repeat="item in categorie" href="#/app/home/categoria:{{item.id_categoria}}">
+          <option class="sub-items" ng-repeat="item in categorie" menu-close value="{{item.id_categoria}}">
             {{item.nome}}
           </option>
         </select>
 
-        <select class="filtro">
-          <option class="sub-items" disabled selected>
-            <i class="icon ion-social-euro"></i>
+        <select class="filtro" ng-model="prezzo">
+          <option class="sub-items" value="">
             Prezzo
           </option>
-          <option class="sub-items" href="#/app/home/prezzo:{{this.text}}">
+          <option class="sub-items" menu-close value="1">
             Crescente
           </option>
-          <option class="sub-items" href="#/app/home/prezzo:{{this.text}}">
+          <option class="sub-items" menu-close value="2">
             Decrescente
-          </option>
-        </select>
-        
-        <select class="filtro">
-          <option class="sub-items" href="#/app/home/">
-
-            Provincia
-          </option>
-          <option class="sub-items" ng-repeat="item in province">
-            {{item.nome}}
           </option>
         </select>
 
