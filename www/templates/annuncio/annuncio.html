@@ -44,8 +44,8 @@
     <div>
       <!-- <left class="marginBottom"><button ng-click="contatta()" class="annuncio_contatta"><p class="ion-heart"> Preferiti</button></left> -->
       <center class="marginBottom">
-        <button ng-click="addPref({{id}})" class="annuncio_pref annuncio_contatta"><p class="ion-ios-star"></button>
-        <button ng-click="addPref({{id}})" class="annuncio_pref annuncio_contatta"><p class="ion-ios-star-outline"></button>
+        <button ng-click="remPref({{id}})" ng-show="isPref()" id="btnPref" class="annuncio_pref annuncio_contatta"><p class="ion-ios-star"></button>
+        <button ng-click="addPref({{id}})" ng-hide="isPref()" class="annuncio_pref annuncio_contatta"><p class="ion-ios-star-outline"></button>
         <button ng-click="contatta()" class="annuncio_contatta"><p class="ion-android-person"> Contatta</button>
       </center>
     </div>
