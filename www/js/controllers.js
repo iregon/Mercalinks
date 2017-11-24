@@ -61,14 +61,20 @@ angular.module('starter.controllers', ['ngCordova'])
   /*Categorie*/
 
   var link = "http://mercalinks.altervista.org/select1.php";
-  $scope.shownGroup = null;
-
   $http.get(link, {
     params: {
       tabella: "categorie"
     }
   }).then(function(response) {
     $scope.categorie = response.data.categorie;
+  }).catch(function(error) {
+    console.log(error);
+  });
+
+  var link = "http://mercalinks.altervista.org/getAllProvince.php";
+  $http.get(link, {
+  }).then(function(response) {
+    $scope.province=response.data.province;
   }).catch(function(error) {
     console.log(error);
   });
