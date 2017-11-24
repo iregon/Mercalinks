@@ -31,6 +31,7 @@ angular.module('starter')
     document.getElementById("btnAddPref").classList.add("annuncio_rem_pref");
   };
 
+
   $scope.contatta = function(){
     $scope.alertPopup = $ionicPopup.show({
       scope: $scope,
