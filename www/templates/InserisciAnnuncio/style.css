@@ -1,7 +1,19 @@
+.hidden_input, #lista_comuni{
+  display: none;
+}
+
 .hidden_iframe {
   display: none;
 }
 
 .qualcosa{
   padding-left:2%;
+}
+
+.icon {
+  font-size: 20px;
+}
+
+#lista_comuni {
+  width: 50%;
 }

@@ -45,29 +45,34 @@
         <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
           Preferiti
         </ion-item>
+        
         <ion-item menu-close class="menu" href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
-
           Inserisci Annuncio
         </ion-item>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
 =======
 <<<<<<< HEAD
-
-        <ion-item menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
 =======
+>>>>>>> daf426282786d566a1847241117363e5142f87d2
+
         <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
+<<<<<<< HEAD
 >>>>>>> 7c740498daf9c6d06fe0d98ce2c20590d595ee69
 >>>>>>> 5a891a6c6a66b76f62d4ee9de7d03fb5343fbf0c
+=======
+>>>>>>> daf426282786d566a1847241117363e5142f87d2
           Annunci Utente
         </ion-item>
-        <button id="login" ng-hide="is_user_logged()" style="margin-top:100%" class="log" style="" menu-close onClick="window.location.href='#/app/login'">
-          Login
-        </button>
-        <button id="logout" ng-show="is_user_logged()" class="log" menu-close ng-click="logout()">
-          Logout
-        </button>
 
+        <div class="log_buttons">
+          <button id="login" ng-hide="is_user_logged()" style="margin-top:100%" class="log" style="" menu-close onClick="window.location.href='#/app/login'">
+            Login
+          </button>
+          <button id="logout" ng-show="is_user_logged()" class="log" menu-close ng-click="logout()">
+            Logout
+          </button>
         </div>
       </ion-list>
     </ion-content>

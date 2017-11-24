@@ -9,7 +9,7 @@
      }
    }).then(function(response) {
      $scope.categorie = response.data.categorie;
-     console.log($scope.categorie);
+    //  console.log($scope.categorie);
    }).catch(function(error) {
      console.log(error);
    });
@@ -17,7 +17,7 @@
    $scope.loadComuni=function(){
      var link = "http://mercalinks.altervista.org/find_comuni_by_name.php";
      var nome_comune = document.getElementById("comune").value;
-
+     var lista_comuni = document.getElementById("lista_comuni");
      if (nome_comune.length >= 3) {
        $http.get(link, {
          params: {
@@ -25,13 +25,14 @@
          }
        }).then(function(response) {
          $scope.comuni = response.data.comuni;
-         console.log($scope.comuni);
+         lista_comuni.style.display = "block";
+        //  console.log($scope.comuni);
        }).catch(function(error) {
          console.log(error);
        });
      }
      else {
-
+       lista_comuni.style.display = "none";
      }
    }
 

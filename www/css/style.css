@@ -156,6 +156,7 @@ ion-item:first-child{
   height: 70px;
   border-radius: 49%;
   border: 1px solid #0099cc;
+  object-fit: cover;
 }
 
 .item-content {
@@ -225,9 +226,9 @@ ion-item:first-child{
   background-color: white;
   border-style:solid;
   border-color: lightgrey;
-  margin-top: 80%;
+  /*margin-top: 80%;
   margin-left: 14%;
-  margin-bottom: 5%;
+  margin-bottom: 5%;*/
 }
 
 /*stile categorie*/
@@ -254,6 +255,20 @@ ion-item:first-child{
 .menu .item-content{
   margin:16px;
   margin-left: 0px;
+}
 
+.log_buttons {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 5%;
+}
 
+.list {
+  height: 70%;
+}
+
+.menu {
+  min-height: 0;
 }

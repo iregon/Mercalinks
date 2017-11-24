@@ -1,4 +1,4 @@
-<ion-view view-title="Home">
+<ion-view view-title="Home" ng-init="loadAnnunci()">
   <ion-content>
     <ion-refresher on-refresh="doRefresh()"></ion-refresher>
 
@@ -22,5 +22,7 @@
         </table>
       </ion-item>
     </ion-list>
+
+    <ion-infinite-scroll on-infinite="loadMore()" distance="20%" icon="ion-loading-c" ></ion-infinite-scroll>
   </ion-content>
 </ion-view>
