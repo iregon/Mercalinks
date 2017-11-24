@@ -1,9 +1,16 @@
 angular.module('starter')
 
-.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup, $window) {
+.controller('AnnuncioCtrl', function($scope, $stateParams, $http, $ionicPopup, $window, $localStorage) {
 
   var link = "http://mercalinks.altervista.org/select2.php";
-  var id=$stateParams.annuncioId;
+  $scope.id=$stateParams.annuncioId;
+
+  $scope.addPref = function(id) {
+    var pref = $localStorage.preferiti;
+    pref.push("" + id + "");
+    $localStorage.preferiti = pref;
+    
+  }
 
   $scope.contatta = function(){
     $scope.alertPopup = $ionicPopup.show({
@@ -34,7 +41,7 @@ angular.module('starter')
 
   $http.get(link,{
     params:{
-      id: id,
+      id: $scope.id,
       tabella: "annunci"
     }
   }).then(
