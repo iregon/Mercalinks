@@ -121,3 +121,7 @@ p{
   width: 49px;
   margin-right: 35px;
 }
+
+.annuncio_pref p {
+  margin: 0;
+}
