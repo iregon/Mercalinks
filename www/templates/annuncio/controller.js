@@ -9,7 +9,9 @@ angular.module('starter')
     var pref = $localStorage.preferiti;
     pref.push("" + id + "");
     $localStorage.preferiti = pref;
-    document.getElementById("btnPref").classList.add("annuncio_add_pref");
+    document.getElementById("btnRemPref").classList.add("annuncio_add_pref");
+
+    document.getElementById("btnAddPref").classList.remove("annuncio_rem_pref");
   };
 
   $scope.isPref = function() {
@@ -25,7 +27,8 @@ angular.module('starter')
       pref.splice(index, 1);
     }
     $localStorage.preferiti = pref;
-    document.getElementById("btnPref").classList.remove("annuncio_add_pref");
+    document.getElementById("btnRemPref").classList.remove("annuncio_add_pref");
+    document.getElementById("btnAddPref").classList.add("annuncio_rem_pref");
   };
 
   $scope.contatta = function(){
