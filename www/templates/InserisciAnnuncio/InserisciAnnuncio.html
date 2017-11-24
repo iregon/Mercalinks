@@ -2,7 +2,7 @@
   <ion-content class="annunci">
 
     <form name="insert" class="inserimento" action="http://mercalinks.altervista.org/add_product.php" method="post" target="hidden_iframe" enctype="multipart/form-data">
-      <div class="list">
+      <div class="form">
         <label class="item item-input qualcosa">
           <div class="image"><i class="icon ion-ios-pricetags qualcosa"></i></div>
           <input type="text" name="titolo" ngMaxlength="40" placeholder="Titolo">
@@ -14,18 +14,11 @@
         </label>
 
         <label class="item item-input qualcosa">
-          <div class="image"><i class="icon ion-android-create"></i></div>
-          <input type="textarea" name="descrizione" ngMaxlength="300" placeholder="Descrizione">
+          <div class="image description">
+            <i class="icon ion-android-create"></i>
+          </div>
+          <textarea rows="3" name="descrizione" ngMaxlength="300" placeholder="Descrizione" class="qualcosa"></textarea>
         </label>
-
-        <label for="immagine" class="item item-input qualcosa">
-          <div class="image"><i class="icon ion-image"></i></div>
-          <label>
-            <!-- <input type="text" placeholder="Immagine" readonly="true" class="qualcosa prova"> -->
-            <input type="file" name="immagine" id="immagine" placeholder="Immagine" class="inputfile">
-          </label>
-        </label>
-
 
         <label class="item item-input qualcosa">
           Categoria:
@@ -48,12 +41,24 @@
                 {{comune.nome}}
               </option>
           </select>
-
         </label>
-        <label class="item item-input">
+
+        <div class="input-file-container">
+          <input class="input-file" id="my-file" type="file">
+          <label tabindex="0" for="my-file" class="input-file-trigger">Scegli un'immagine</label>
+        </div>
+        <p class="file-return"></p>
+
+      </label>
+
+        <label class="item item-input sotto">
           <button  class="button button-block button-positive" ng-click="messaggio()">Inserisci</button>
         </label>
+
       </div>
+
+
+
     </form>
 
 
