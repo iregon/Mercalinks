@@ -27,59 +27,61 @@
         </div>
       </div>
       <ion-list>
+
         <ion-item class="menu" menu-close href="#/app/home/home">
+          <i class="icon ion-home"></i>
           Home
         </ion-item>
 
         <select class="filtro">
-          <option class="sub-items" href="#/app/categoria/{{item.id_categoria}}">
+          <option class="sub-items" href="#/app/home/">
+            <i class="icon ion-clipboard"></i>
             Categorie
           </option>
-          <option class="sub-items" ng-repeat="item in categorie" href="#/app/categoria/{{item.id_categoria}}">
+          <option class="sub-items" ng-repeat="item in categorie" href="#/app/home/categoria:{{item.id_categoria}}">
             {{item.nome}}
           </option>
         </select>
 
         <select class="filtro">
           <option class="sub-items" disabled selected>
+            <i class="icon ion-social-euro"></i>
             Prezzo
           </option>
-          <option class="sub-items" href="#/app/categoria/{{}}">
+          <option class="sub-items" href="#/app/home/prezzo:{{this.text}}">
             Crescente
           </option>
-          <option class="sub-items">
+          <option class="sub-items" href="#/app/home/prezzo:{{this.text}}">
             Decrescente
           </option>
         </select>
-
+        
         <select class="filtro">
-          <option class="sub-items">
-            Luogo
-          </option>
-          <option class="sub-items">
-            Regione
-          </option>
-          <option class="sub-items">
+          <option class="sub-items" href="#/app/home/">
+
             Provincia
           </option>
-          <option class="sub-items">
-            Comune
+          <option class="sub-items" ng-repeat="item in province">
+            {{item.nome}}
           </option>
         </select>
 
         <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
+            <i class="icon ion-star"></i>
           Preferiti
         </ion-item>
 
         <ion-item menu-close class="menu" href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
+            <i class="icon ion-plus-round"></i>
           Inserisci Annuncio
         </ion-item>
         <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
+            <i class="icon ion-ios-body"></i>
           Annunci Utente
         </ion-item>
 
         <div class="log_buttons">
-          <button id="login" ng-hide="is_user_logged()" style="margin-top:100%" class="log" style="" menu-close onClick="window.location.href='#/app/login'">
+          <button id="login" ng-hide="is_user_logged()" class="log" menu-close onClick="window.location.href='#/app/login'">
             Login
           </button>
           <button id="logout" ng-show="is_user_logged()" class="log" menu-close ng-click="logout()">

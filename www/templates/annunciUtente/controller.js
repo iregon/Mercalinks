@@ -63,7 +63,7 @@ angular.module('starter')
   }
 
   $scope.showConfirm = function(id) {
-     var link = "http://mercalinks.altervista.org/delete.php";
+     var link = "http://mercalinks.altervista.org/delete1.php";
      var confirmPopup = $ionicPopup.confirm({
        title: 'Elimina',
        template: 'Vuoi davvero eliminare questo annuncio?',
@@ -78,12 +78,12 @@ angular.module('starter')
 
           $http.get(link, {
             params: {
-              tabella: 'annunci',
-              id_annuncio: id
+              // tabella: 'annunci',
+              id: id
             }
-          })//.then(function(){
+          }).then(function(){
           //   console.log("suca");
-          // })
+           })
           $scope.doRefresh();
         }
       }]
