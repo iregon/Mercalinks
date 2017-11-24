@@ -40,7 +40,7 @@
   color: #000000;
 }
 .annuncio_contatta{
-  border: 8px solid #890000;
+  border: 6px solid #890000;
   color: #FFFFFF;
   background-color: #890000;
   font-size: 1.8em;
@@ -78,7 +78,7 @@
 
 .call{
   color: black;
-  text-decoration-line: none; 
+  text-decoration-line: none;
 }
 
 .contattaCancel{
@@ -113,4 +113,11 @@
 p{
   margin-left: 8px;
   margin-right: 8px;
+  margin-bottom: 0;
+}
+
+.annuncio_pref {
+  border-radius: 49%;
+  width: 49px;
+  margin-right: 35px;
 }
