@@ -28,7 +28,9 @@ angular.module('starter')
   }
 
   $scope.doRefresh= function(){
-    $scope.annunciU = [];
+    $scope.annunciU=[];
+    $scope.annunciU.length=0;
+    console.log($scope.annunciU);
     $http.get(link, {
       params: {
         tabella: "annunci"
@@ -60,7 +62,8 @@ angular.module('starter')
     console.log("W la figa");
   }
 
-  $scope.showConfirm = function() {
+  $scope.showConfirm = function(id) {
+     var link = "http://mercalinks.altervista.org/delete.php";
      var confirmPopup = $ionicPopup.confirm({
        title: 'Elimina',
        template: 'Vuoi davvero eliminare questo annuncio?',
@@ -72,16 +75,25 @@ angular.module('starter')
         text: 'OK',
         type: 'button-positive',
         onTap: function(e) {
-          // Returning a value will cause the promise to resolve with the given value.
+
+          $http.get(link, {
+            params: {
+              tabella: 'annunci',
+              id_annuncio: id
+            }
+          })//.then(function(){
+          //   console.log("suca");
+          // })
+          $scope.doRefresh();
         }
       }]
      });
 
-     confirmPopup.then(function(res) {
-       if(res) {
-
-       }
-     });
+     // confirmPopup.then(function(res) {
+     //   if(res) {
+     //
+     //   }
+     // });
    };
 })
 

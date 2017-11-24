@@ -6,8 +6,40 @@
   display: none;
 }
 
-.qualcosa{
+.qualcosa input{
   padding-left:2%;
+  border: 0px;
+}
+
+.qualcosa label{
+      background-color: transparent;
+      z-index: 5;
+}
+
+.prova{
+  z-index: 1;
+  background-color: #fff !important; 
+}
+
+.image div{
+  height:3%;
+  width: 3%;
+  position: absolute;
+  align-content: center;
+
+}
+
+.inputfile{
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.euro input{
+  padding-left: 3%;
 }
 
 .icon {
@@ -16,4 +48,9 @@
 
 #lista_comuni {
   width: 50%;
+}
+
+.inserimento{
+  margin: 10px;
+  padding: 10px;
 }

@@ -274,7 +274,11 @@ ion-item:first-child{
   bottom: 0;
   text-align: center;
   padding-bottom: 5%;
+<<<<<<< HEAD
   z-index: 100;
+=======
+  /*z-index: -1;*/
+>>>>>>> 2f4142c0f47aa85bf4e265d45d8964882a93e1af
 }
 
 .list {
