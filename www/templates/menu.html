@@ -27,12 +27,20 @@
         </div>
       </div>
       <ion-list>
+
         <ion-item class="menu" menu-close href="#/app/home/home">
+          <i class="icon ion-home"></i>
           Home
         </ion-item>
 
+<<<<<<< HEAD
         <select class="filtro" ng-model="cat">
           <option class="sub-items" value="">
+=======
+        <select class="filtro">
+          <option class="sub-items" href="#/app/home/">
+            <i class="icon ion-clipboard"></i>
+>>>>>>> 0a58a9e7157cbe845734f3fb976f902ea2a1dd38
             Categorie
           </option>
           <option class="sub-items" ng-repeat="item in categorie" menu-close value="{{item.id_categoria}}">
@@ -40,8 +48,14 @@
           </option>
         </select>
 
+<<<<<<< HEAD
         <select class="filtro" ng-model="prezzo">
           <option class="sub-items" value="">
+=======
+        <select class="filtro">
+          <option class="sub-items" disabled selected>
+            <i class="icon ion-social-euro"></i>
+>>>>>>> 0a58a9e7157cbe845734f3fb976f902ea2a1dd38
             Prezzo
           </option>
           <option class="sub-items" menu-close value="1">
@@ -51,15 +65,31 @@
             Decrescente
           </option>
         </select>
+<<<<<<< HEAD
+=======
+        
+        <select class="filtro">
+          <option class="sub-items" href="#/app/home/">
+
+            Provincia
+          </option>
+          <option class="sub-items" ng-repeat="item in province">
+            {{item.nome}}
+          </option>
+        </select>
+>>>>>>> 0a58a9e7157cbe845734f3fb976f902ea2a1dd38
 
         <ion-item menu-close class="menu" href="#/app/preferiti" ng-show="is_user_logged()">
+            <i class="icon ion-star"></i>
           Preferiti
         </ion-item>
 
         <ion-item menu-close class="menu" href="#/app/inserisciAnnuncio" ng-show="is_user_logged()">
+            <i class="icon ion-plus-round"></i>
           Inserisci Annuncio
         </ion-item>
         <ion-item class="menu" menu-close href="#/app/annunciUtente" ng-show="is_user_logged()">
+            <i class="icon ion-ios-body"></i>
           Annunci Utente
         </ion-item>
 
